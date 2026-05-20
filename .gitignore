@@ -1,0 +1,55 @@
+﻿# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+.next/
+.nuxt/
+out/
+
+# Cache
+.cache/
+.parcel-cache/
+.npm/
+.yarn/cache/
+.eslintcache
+
+# Testing / coverage
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+
+# Package manager lock backup files
+package-lock.json.*
+yarn.lock.*
+pnpm-lock.yaml.*

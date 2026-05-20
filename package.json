@@ -1,0 +1,24 @@
+{
+  "name": "osv",
+  "version": "1.0.0",
+  "description": "OSV Main Server - MQTT client, data receiver, signal controller",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "kill": "for /f \"tokens=5\" %a in ('netstat -ano ^| findstr :43000 ^| findstr LISTENING') do taskkill /F /PID %a",
+    "dev": "node --watch src/index.js",
+    "setup-db": "node src/db/setup.js",
+    "seed-devices": "node src/db/seed-devices.js",
+    "test": "node --test test/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mqtt": "^5.15.1",
+    "mysql2": "^3.22.3",
+    "socket.io": "^4.8.3"
+  }
+}

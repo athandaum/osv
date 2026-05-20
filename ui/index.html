@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OSV Signal Control (Manual)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      padding: 20px 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #a0c4ff;
+      letter-spacing: 1px;
+    }
+
+    /* ── Section ── */
+    .section {
+      background: #16213e;
+      border: 1px solid #0f3460;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #445;
+      margin-bottom: 14px;
+    }
+
+    /* ── Signal grid table ── */
+    .sig-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .sig-table th {
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #445;
+      font-weight: 600;
+      padding: 0 0 8px 0;
+      text-align: center;
+    }
+
+    .sig-table th.zone-th { text-align: left; padding-left: 0; width: 48px; }
+
+    .sig-table td {
+      padding: 6px 4px;
+      vertical-align: middle;
+      border-top: 1px solid #0a1a30;
+    }
+
+    .sig-table tr:first-child td { border-top: none; }
+
+    .zone-cell {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #a0c4ff;
+      white-space: nowrap;
+      padding-right: 8px;
+    }
+
+    .zone-cell.all-zone {
+      color: #7eadff;
+      font-size: 0.8rem;
+      border-top: 2px solid #0f3460 !important;
+    }
+
+    /* divider between L and S groups */
+    .div-cell {
+      width: 12px;
+      text-align: center;
+    }
+    .div-line {
+      width: 1px;
+      background: #0f3460;
+      height: 36px;
+      margin: 0 auto;
+    }
+
+    /* ── Type label (L / S) ── */
+    .type-hdr {
+      font-size: 0.6rem;
+      font-weight: 800;
+      color: #334;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0 6px 8px 6px;
+      text-align: center;
+    }
+
+    /* ── Channel button ── */
+    .ch-group {
+      display: flex;
+      gap: 5px;
+      align-items: flex-start;
+    }
+
+    .ch-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .ch-btn {
+      width: 44px;
+      height: 36px;
+      border-radius: 6px;
+      border: 1.5px solid #1a2a4a;
+      background: #0a1628;
+      color: #334;
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: background 0.18s, border-color 0.18s, color 0.18s, box-shadow 0.18s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ch-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* OFF hover */
+    .ch-btn:hover:not(:disabled):not(.active) { border-color: #2a4a7a; color: #667; }
+
+    /* ON / active states */
+    .ch-btn.active.ch-green  { background: #0f2e1a; border-color: #2ecc71; color: #2ecc71; box-shadow: 0 0 8px rgba(46,204,113,.5); }
+    .ch-btn.active.ch-yellow { background: #2e2c10; border-color: #f1c40f; color: #f1c40f; box-shadow: 0 0 8px rgba(241,196,15,.5); }
+    .ch-btn.active.ch-red    { background: #2e1010; border-color: #e74c3c; color: #e74c3c; box-shadow: 0 0 8px rgba(231,76,60,.5); }
+    .ch-btn.active.ch-buzzer { background: #1e1030; border-color: #9b59b6; color: #9b59b6; box-shadow: 0 0 8px rgba(155,89,182,.5); }
+
+    /* colour tint on hover when OFF */
+    .ch-btn.ch-green:hover:not(:disabled):not(.active)  { border-color: #2ecc71; color: #2ecc71; }
+    .ch-btn.ch-yellow:hover:not(:disabled):not(.active) { border-color: #f1c40f; color: #f1c40f; }
+    .ch-btn.ch-red:hover:not(:disabled):not(.active)    { border-color: #e74c3c; color: #e74c3c; }
+    .ch-btn.ch-buzzer:hover:not(:disabled):not(.active) { border-color: #9b59b6; color: #9b59b6; }
+
+    /* ── Echo dot below each button ── */
+    .echo-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #0d1f3c;
+      border: 1px solid #1e3a5f;
+      transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
+      flex-shrink: 0;
+    }
+    .echo-dot.on-green  { background: #2ecc71; border-color: #2ecc71; box-shadow: 0 0 5px rgba(46,204,113,.7); }
+    .echo-dot.on-yellow { background: #f1c40f; border-color: #f1c40f; box-shadow: 0 0 5px rgba(241,196,15,.7); }
+    .echo-dot.on-red    { background: #e74c3c; border-color: #e74c3c; box-shadow: 0 0 5px rgba(231,76,60,.7); }
+    .echo-dot.on-buzzer { background: #9b59b6; border-color: #9b59b6; box-shadow: 0 0 5px rgba(155,89,182,.7); }
+
+    /* ── Status bar ── */
+    .status-bar {
+      font-size: 0.75rem;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: #0f1f3d;
+      color: #445;
+      min-height: 34px;
+      margin-top: 4px;
+      border: 1px solid #0f3460;
+    }
+    .status-bar.ok  { color: #2ecc71; }
+    .status-bar.err { color: #e74c3c; }
+
+    /* ── Feed ── */
+    .feed-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      margin-bottom: 10px;
+    }
+    .feed-btn {
+      padding: 7px 16px;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .feed-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .feed-btn.start  { background: #27ae60; color: #fff; }
+    .feed-btn.stop   { background: #c0392b; color: #fff; }
+    .feed-btn.clear  { background: #0f3460; color: #667; font-weight: normal; }
+    .feed-btn:hover:not(:disabled) { opacity: 0.85; }
+
+    .feed-conn {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 0.78rem; color: #445;
+    }
+    .conn-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #334; flex-shrink: 0;
+    }
+    .conn-dot.connected { background: #2ecc71; box-shadow: 0 0 5px #2ecc71; }
+    .conn-dot.error     { background: #e74c3c; }
+
+    textarea {
+      width: 100%; height: 220px;
+      background: #0a1628; color: #7eadff;
+      border: 1px solid #0f3460; border-radius: 6px;
+      padding: 10px 12px;
+      font-family: 'Consolas', monospace; font-size: 0.78rem;
+      resize: vertical; line-height: 1.6;
+    }
+
+    /* ── Mobile cards: hidden by default, shown on small screens ── */
+    .mobile-cards { display: none; }
+
+    @media (max-width: 640px) {
+      body { padding: 8px; }
+
+      /* Hide desktop table section, show mobile cards */
+      .desktop-section { display: none; }
+      .mobile-cards {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0;
+        background: #16213e;
+        border: 1px solid #0f3460;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 12px;
+      }
+
+      /* One row per zone */
+      .m-row {
+        display: flex;
+        align-items: center;
+        padding: 8px 8px;
+        border-bottom: 1px solid #0a1a30;
+        gap: 6px;
+      }
+      .m-row:last-child { border-bottom: none; }
+      .m-row.all-row {
+        background: #0a1628;
+        border-top: 2px solid #0f3460;
+      }
+
+      .m-zone-label {
+        font-weight: 800;
+        font-size: 0.82rem;
+        color: #a0c4ff;
+        width: 34px;
+        flex-shrink: 0;
+      }
+      .m-row.all-row .m-zone-label { color: #7eadff; font-size: 0.72rem; }
+
+      /* L / S group */
+      .m-sig-group {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex: 1;
+      }
+
+      .m-divider {
+        width: 1px;
+        height: 44px;
+        background: #0f3460;
+        margin: 0 4px;
+        flex-shrink: 0;
+      }
+
+      .m-type-label {
+        font-size: 0.55rem;
+        font-weight: 800;
+        color: #445;
+        text-transform: uppercase;
+        width: 10px;
+        flex-shrink: 0;
+        text-align: center;
+      }
+
+      .m-btns {
+        display: flex;
+        gap: 4px;
+        flex: 1;
+      }
+
+      .m-btn-wrap {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+      }
+
+      /* Large tap targets */
+      .ch-btn {
+        width: 100%;
+        height: 48px;
+        font-size: 0.65rem;
+        font-weight: 800;
+        border-radius: 7px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+      }
+
+      .echo-dot { width: 7px; height: 7px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>OSV Signal Control (Manual)</h1>
+
+  <!-- ── Signal Panel (desktop) ── -->
+  <div class="section desktop-section">
+    <div class="section-title">Zone Signal Control</div>
+    <table class="sig-table" id="sig-table">
+      <thead>
+        <tr>
+          <th class="zone-th">Zone</th>
+          <th class="type-hdr" colspan="4">L Signal</th>
+          <th class="div-cell"></th>
+          <th class="type-hdr" colspan="4">S Signal</th>
+        </tr>
+        <tr>
+          <th class="zone-th"></th>
+          <th>GRN</th><th>YEL</th><th>RED</th><th>BZR</th>
+          <th class="div-cell"></th>
+          <th>GRN</th><th>YEL</th><th>RED</th><th>BZR</th>
+        </tr>
+      </thead>
+      <tbody id="sig-body">
+        <!-- filled by JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── Mobile Cards (hidden on desktop) ── -->
+  <div class="mobile-cards" id="mobile-cards"></div>
+
+  <!-- ── Sensor Data Feed ── -->
+  <div class="section">
+    <div class="section-title">Sensor Data Feed</div>
+    <div class="feed-toolbar">
+      <button class="feed-btn start" id="feed-start" onclick="startFeed()">Start</button>
+      <button class="feed-btn stop"  id="feed-stop"  onclick="stopFeed()" disabled>Stop</button>
+      <div class="feed-conn">
+        <span class="conn-dot" id="conn-dot"></span>
+        <span id="feed-status">Not connected</span>
+      </div>
+      <button class="feed-btn clear" style="margin-left:auto" onclick="clearFeed()">Clear</button>
+    </div>
+    <textarea id="feed-output" readonly></textarea>
+  </div>
+
+  <div class="status-bar" id="status">Ready.</div>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script>
+    const BASE_URL = `${window.location.protocol}//${window.location.hostname}:43000`;
+    let socket     = null;
+
+    const ZONES    = ['M-1', 'M-2', 'M-3', 'M-4'];
+    const ALL_ZONE = 'ALL';
+
+    // channels in display order: Green, Yellow, Red, Buzzer
+    const CHANNELS = [
+      { val: 3, label: 'GRN', cls: 'ch-green',  echo: 'green'  },
+      { val: 2, label: 'YEL', cls: 'ch-yellow', echo: 'yellow' },
+      { val: 1, label: 'RED', cls: 'ch-red',    echo: 'red'    },
+      { val: 4, label: 'BZR', cls: 'ch-buzzer', echo: 'buzzer' },
+    ];
+    const TYPES = [
+      { val: 0, key: 'L' },
+      { val: 1, key: 'S' },
+    ];
+
+    // ── In-memory state ────────────────────────────────────────────────────
+    // state[zone][typeKey] = channel val that is ON, or null
+    const state = {};
+    [...ZONES, ALL_ZONE].forEach(z => {
+      state[z] = { L: null, S: null };
+    });
+
+    // ── Build table ────────────────────────────────────────────────────────
+    function buildTable() {
+      const tbody = document.getElementById('sig-body');
+      tbody.innerHTML = '';
+
+      // Individual zones first, then ALL row
+      [...ZONES, ALL_ZONE].forEach(zone => {
+        const isAll = zone === ALL_ZONE;
+        const zid   = zone.replace('-', '');
+        const tr    = document.createElement('tr');
+
+        // Zone label
+        const tdZone = document.createElement('td');
+        tdZone.className = 'zone-cell' + (isAll ? ' all-zone' : '');
+        tdZone.textContent = zone;
+        tr.appendChild(tdZone);
+
+        TYPES.forEach((type, ti) => {
+          // divider between L and S
+          if (ti === 1) {
+            const tdDiv = document.createElement('td');
+            tdDiv.className = 'div-cell';
+            tdDiv.rowSpan   = 1;
+            tdDiv.innerHTML = '<div class="div-line"></div>';
+            tr.appendChild(tdDiv);
+          }
+
+          CHANNELS.forEach(ch => {
+            const td   = document.createElement('td');
+            const wrap = document.createElement('div');
+            wrap.className = 'ch-wrap';
+
+            const btnId = `btn-${zid}-${type.key}-${ch.echo}`;
+            const dotId = isAll ? null : `dot-${zid}-${type.key}-${ch.echo}`;
+
+            const btn = document.createElement('button');
+            btn.id        = btnId;
+            btn.className = `ch-btn ${ch.cls}`;
+            btn.textContent = ch.label;
+            btn.onclick   = () => handleBtn(zone, zid, type.val, type.key, ch.val, ch.echo);
+            wrap.appendChild(btn);
+
+            // Echo dot (not shown on ALL row)
+            if (!isAll) {
+              const dot = document.createElement('div');
+              dot.id        = dotId;
+              dot.className = 'echo-dot';
+              wrap.appendChild(dot);
+            }
+
+            td.appendChild(wrap);
+            tr.appendChild(td);
+          });
+        });
+
+        tbody.appendChild(tr);
+      });
+    }
+
+    buildTable();
+
+    // ── Build mobile rows (one row per zone) ──────────────────────────────
+    function buildMobileCards() {
+      const container = document.getElementById('mobile-cards');
+      container.innerHTML = '';
+
+      // Column header row
+      const hdr = document.createElement('div');
+      hdr.style.cssText = 'display:flex;align-items:center;padding:5px 8px;border-bottom:1px solid #0f3460;';
+      hdr.innerHTML = `
+        <div style="width:34px;flex-shrink:0;"></div>
+        <div style="flex:1;display:flex;align-items:center;gap:4px;">
+          <div style="width:10px;flex-shrink:0;"></div>
+          ${CHANNELS.map(c => `<div style="flex:1;text-align:center;font-size:0.5rem;color:#445;text-transform:uppercase;letter-spacing:0.5px;">${c.label}</div>`).join('')}
+        </div>
+        <div style="width:9px;margin:0 4px;flex-shrink:0;"></div>
+        <div style="flex:1;display:flex;align-items:center;gap:4px;">
+          <div style="width:10px;flex-shrink:0;"></div>
+          ${CHANNELS.map(c => `<div style="flex:1;text-align:center;font-size:0.5rem;color:#445;text-transform:uppercase;letter-spacing:0.5px;">${c.label}</div>`).join('')}
+        </div>`;
+      container.appendChild(hdr);
+
+      [...ZONES, ALL_ZONE].forEach(zone => {
+        const isAll = zone === ALL_ZONE;
+        const zid   = zone.replace('-', '');
+
+        const row = document.createElement('div');
+        row.className = isAll ? 'm-row all-row' : 'm-row';
+
+        // Zone label
+        const lbl = document.createElement('div');
+        lbl.className   = 'm-zone-label';
+        lbl.textContent = isAll ? 'ALL' : zone;
+        row.appendChild(lbl);
+
+        TYPES.forEach((type, ti) => {
+          // Divider between L and S
+          if (ti === 1) {
+            const div = document.createElement('div');
+            div.className = 'm-divider';
+            row.appendChild(div);
+          }
+
+          const group = document.createElement('div');
+          group.className = 'm-sig-group';
+
+          const typeLbl = document.createElement('div');
+          typeLbl.className   = 'm-type-label';
+          typeLbl.textContent = type.key;
+          group.appendChild(typeLbl);
+
+          const btns = document.createElement('div');
+          btns.className = 'm-btns';
+
+          CHANNELS.forEach(ch => {
+            const wrap = document.createElement('div');
+            wrap.className = 'm-btn-wrap';
+
+            const btn = document.createElement('button');
+            btn.id          = `mbtn-${zid}-${type.key}-${ch.echo}`;
+            btn.className   = `ch-btn ${ch.cls}`;
+            btn.textContent = ch.label;
+            btn.onclick     = () => handleBtn(zone, zid, type.val, type.key, ch.val, ch.echo);
+            wrap.appendChild(btn);
+
+            if (!isAll) {
+              const dot = document.createElement('div');
+              dot.id        = `mdot-${zid}-${type.key}-${ch.echo}`;
+              dot.className = 'echo-dot';
+              wrap.appendChild(dot);
+            }
+
+            btns.appendChild(wrap);
+          });
+
+          group.appendChild(btns);
+          row.appendChild(group);
+        });
+
+        container.appendChild(row);
+      });
+    }
+
+    buildMobileCards();
+
+    // ── Button click handler ───────────────────────────────────────────────
+    async function handleBtn(zone, zid, typeVal, typeKey, chVal, chEcho) {
+      const isAll  = zone === ALL_ZONE;
+      // For ALL row: ON only if every zone already has this channel active → toggle OFF, else ON
+      const curOn  = isAll
+        ? (ZONES.every(z => state[z][typeKey] === chVal) ? chVal : null)
+        : state[zone][typeKey];
+      const turnOn = curOn === chVal ? false : true;
+      const data   = turnOn ? 1 : 0;
+
+      // Disable all buttons in this type column while sending
+      setRowDisabled(zid, typeKey, true);
+
+      let ok;
+      if (isAll) {
+        ok = await sendAll(typeVal, typeKey, chVal, data);
+      } else {
+        ok = await sendOne(zone, zid, typeVal, typeKey, chVal, chEcho, data);
+      }
+
+      setRowDisabled(zid, typeKey, false);
+
+      if (ok) {
+        setStatus(`[${zone}] ${typeKey} ${chEcho.toUpperCase()} → ${data ? 'ON' : 'OFF'}`, 'ok');
+      } else {
+        setStatus(`[${zone}] ${typeKey} ${chEcho.toUpperCase()} — failed`, 'err');
+      }
+    }
+
+    // ── Send to one zone ───────────────────────────────────────────────────
+    async function sendOne(zone, zid, typeVal, typeKey, chVal, chEcho, data) {
+      const ok = await apiSend(zone, chVal, typeVal, data);
+      if (!ok) return false;
+
+      if (data === 1) {
+        state[zone][typeKey] = chVal;
+        CHANNELS.forEach(c => {
+          setBtnActive(zid, typeKey, c.echo, false);
+          setEchoDot(zid, typeKey, c.echo, false);
+        });
+        setBtnActive(zid, typeKey, chEcho, true);
+        setEchoDot(zid, typeKey, chEcho, true);
+      } else {
+        state[zone][typeKey] = null;
+        setBtnActive(zid, typeKey, chEcho, false);
+        setEchoDot(zid, typeKey, chEcho, false);
+      }
+      syncAllRow();
+      return true;
+    }
+
+    // ── Send to all zones ──────────────────────────────────────────────────
+    async function sendAll(typeVal, typeKey, chVal, data) {
+      const chEcho = CHANNELS.find(c => c.val === chVal).echo;
+      let allOk = true;
+      for (const zone of ZONES) {
+        const zid = zone.replace('-', '');
+        const ok  = await apiSend(zone, chVal, typeVal, data);
+        if (ok) {
+          if (data === 1) {
+            state[zone][typeKey] = chVal;
+            CHANNELS.forEach(c => {
+              setBtnActive(zid, typeKey, c.echo, false);
+              setEchoDot(zid, typeKey, c.echo, false);
+            });
+            setBtnActive(zid, typeKey, chEcho, true);
+            setEchoDot(zid, typeKey, chEcho, true);
+          } else {
+            state[zone][typeKey] = null;
+            CHANNELS.forEach(c => {
+              setBtnActive(zid, typeKey, c.echo, false);
+              setEchoDot(zid, typeKey, c.echo, false);
+            });
+          }
+        } else {
+          allOk = false;
+        }
+      }
+      syncAllRow();
+      return allOk;
+    }
+
+    // ── API call ───────────────────────────────────────────────────────────
+    async function apiSend(zone, channel, type, data) {
+      try {
+        const res = await fetch(`${BASE_URL}/api/signal/${zone}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ channel, type, data })
+        });
+        return res.ok;
+      } catch { return false; }
+    }
+
+    // ── Sync ALL row from individual zone states ──────────────────────────
+    function syncAllRow() {
+      TYPES.forEach(type => {
+        CHANNELS.forEach(ch => {
+          // ALL button is ON only if every zone has this channel active for this type
+          const allOn = ZONES.every(z => state[z][type.key] === ch.val);
+          setBtnActive('ALL', type.key, ch.echo, allOn);
+        });
+      });
+    }
+
+    // ── UI helpers ─────────────────────────────────────────────────────────
+    function setBtnActive(zid, typeKey, chEcho, on) {
+      [`btn-${zid}-${typeKey}-${chEcho}`, `mbtn-${zid}-${typeKey}-${chEcho}`].forEach(id => {
+        const btn = document.getElementById(id);
+        if (!btn) return;
+        if (on) btn.classList.add('active');
+        else    btn.classList.remove('active');
+      });
+    }
+
+    function setRowDisabled(zid, typeKey, disabled) {
+      CHANNELS.forEach(c => {
+        [`btn-${zid}-${typeKey}-${c.echo}`, `mbtn-${zid}-${typeKey}-${c.echo}`].forEach(id => {
+          const btn = document.getElementById(id);
+          if (btn) btn.disabled = disabled;
+        });
+      });
+    }
+
+    function setStatus(msg, type = '') {
+      const el = document.getElementById('status');
+      el.textContent = msg;
+      el.className = 'status-bar ' + type;
+    }
+
+    // ── Echo dot update (from socket signal:echo) ──────────────────────────
+    function updateEcho(zone, channel, type, data) {
+      const zid     = zone.replace('-', '');
+      const typeKey = type === 0 ? 'L' : 'S';
+      const on      = data === 1;
+      const chObj   = CHANNELS.find(c => c.val === channel);
+
+      if (channel === 0) {
+        // ALL channel — update all dots
+        CHANNELS.forEach(c => setEchoDot(zid, typeKey, c.echo, on));
+      } else if (chObj) {
+        if (on) CHANNELS.forEach(c => setEchoDot(zid, typeKey, c.echo, false));
+        setEchoDot(zid, typeKey, chObj.echo, on);
+      }
+    }
+
+    function setEchoDot(zid, typeKey, chEcho, on) {
+      [`dot-${zid}-${typeKey}-${chEcho}`, `mdot-${zid}-${typeKey}-${chEcho}`].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.className = on ? `echo-dot on-${chEcho}` : 'echo-dot';
+      });
+    }
+
+    // ── Restore state from DB ──────────────────────────────────────────────
+    async function loadState() {
+      try {
+        const res  = await fetch(`${BASE_URL}/api/signal/state`);
+        const json = await res.json();
+        if (!json.success) return;
+
+        Object.entries(json.data).forEach(([zone, types]) => {
+          const zid = zone.replace('-', '');
+          ['L', 'S'].forEach(key => {
+            const s = types[key];
+            if (!s) return;
+            const on = s.data === 1;
+            state[zone][key] = on ? s.channel : null;
+            if (on) {
+              const chObj = CHANNELS.find(c => c.val === s.channel);
+              if (chObj) {
+                CHANNELS.forEach(c => {
+                  setBtnActive(zid, key, c.echo, false);
+                  setEchoDot(zid, key, c.echo, false);
+                });
+                setBtnActive(zid, key, chObj.echo, true);
+                setEchoDot(zid, key, chObj.echo, true);
+              }
+            }
+          });
+        });
+        syncAllRow();
+      } catch (e) {
+        console.warn('[loadState]', e.message);
+      }
+    }
+
+    // ── Socket / Feed ──────────────────────────────────────────────────────
+    function appendFeed(text) {
+      const ta = document.getElementById('feed-output');
+      ta.value += text + '\n';
+      ta.scrollTop = ta.scrollHeight;
+    }
+
+    function setFeedStatus(msg, st) {
+      document.getElementById('feed-status').textContent = msg;
+      document.getElementById('conn-dot').className = 'conn-dot' + (st ? ' ' + st : '');
+    }
+
+    function startFeed() {
+      if (socket) return;
+      socket = io(BASE_URL);
+
+      socket.on('connect', () => {
+        setFeedStatus('Connected', 'connected');
+        appendFeed(`[${new Date().toLocaleTimeString()}] Connected`);
+        document.getElementById('feed-start').disabled = true;
+        document.getElementById('feed-stop').disabled  = false;
+      });
+
+      socket.on('disconnect', () => {
+        setFeedStatus('Disconnected', '');
+        appendFeed(`[${new Date().toLocaleTimeString()}] Disconnected`);
+        document.getElementById('feed-start').disabled = false;
+        document.getElementById('feed-stop').disabled  = true;
+        socket = null;
+      });
+
+      socket.on('sensor:data', d => {
+        appendFeed(`[${new Date().toLocaleTimeString()}] DATA  ${d.deviceName}  val=${d.dataValue}  cal=${d.calibration}`);
+      });
+
+      socket.on('alarm:change', d => {
+        appendFeed(`[${new Date().toLocaleTimeString()}] ALARM  zone=${d.zoneId}  ${d.previous}→${d.level}  ${d.message}`);
+      });
+
+      socket.on('comms:loss', d => {
+        appendFeed(`[${new Date().toLocaleTimeString()}] COMMS LOSS  device=${d.deviceName}  zone=${d.zoneName}`);
+      });
+
+      socket.on('signal:echo', d => {
+        updateEcho(d.zone, d.channel, d.type, d.data);
+      });
+
+      socket.on('connect_error', err => {
+        setFeedStatus('Error', 'error');
+        appendFeed(`[${new Date().toLocaleTimeString()}] Error: ${err.message}`);
+      });
+    }
+
+    function stopFeed()  { if (socket) socket.disconnect(); }
+    function clearFeed() { document.getElementById('feed-output').value = ''; }
+
+    // ── Init ───────────────────────────────────────────────────────────────
+    startFeed();
+    loadState();
+  </script>
+</body>
+</html>

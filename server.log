@@ -1,0 +1,1841 @@
+◇ injected env (14) from .env // tip: ⌘ enable debugging { debug: true }
+◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+[SimEngine] Started — sending simulated readings every 30 minutes
+[SimEngine] Tick — injecting simulated sensor data
+[Server] HTTP + Socket.IO listening on port 43000
+[MQTT] Connected to broker at mqtt://175.115.53.219:1883
+[MQTT] Subscribed to topic: Data
+[MQTT] Subscribed to topics: Signal/M-1 ~ M-4
+[DB] New connection established
+[DB] New connection established
+[DB] New connection established
+[Server] Zone alarm levels reset to normal
+[DataHandler] Inserted 24 readings
+[AlarmService] SIMULATION — M-4: val=11.143179 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-3: val=13.40818 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-1: val=30.314385 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=15.863535 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=35.935342 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-3: val=18.289936 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-1: val=12.249299 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=11.465066 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=12.066348 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=21.891148 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.131326 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=15.410035 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=15.227175 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=15.842954 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=17.611152 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=19.381334 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=18.459575 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=26.372348 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=15.650123 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=15.519569 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.502345 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=15.209367 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=9.491617 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=20.383764 level=normal → would send GREEN to Both signal
+[Socket.IO] Client connected: P1D484t-Aq9rucKlAAAB
+[Socket.IO] Client connected: Z0sOP6QcJ1BlGS1jAAAD
+[Socket.IO] Client connected: ApZoaSfqOm2Kz7YgAAAF
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[Socket.IO] Client connected: _eQJgzLVURApaFY6AAAH
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client disconnected: P1D484t-Aq9rucKlAAAB
+[Socket.IO] Client connected: Q_0dREcLor7WPzQHAAAJ
+[Socket.IO] Client disconnected: Q_0dREcLor7WPzQHAAAJ
+[Socket.IO] Client connected: LxghYIovdgm0KOq7AAAL
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-AST-01
+[Watchdog] Simulation mode — comms loss suppressed for M3-F2-AST-02
+[Watchdog] Simulation mode — comms loss suppressed for M1-F2-AST-03
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-AST-04
+[Watchdog] Simulation mode — comms loss suppressed for M2-F3-AST-05
+[Watchdog] Simulation mode — comms loss suppressed for M3-F4-AST-06
+[Watchdog] Simulation mode — comms loss suppressed for M1-F4-AST-07
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-AST-08
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-AST-09
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-AST-10
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-ASG-01
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-ASG-02
+[Watchdog] Simulation mode — comms loss suppressed for M2-F1-ASG-03
+[Watchdog] Simulation mode — comms loss suppressed for M4-F2-ASG-04
+[Watchdog] Simulation mode — comms loss suppressed for M2-F2-ASG-05
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-ASG-06
+[Watchdog] Simulation mode — comms loss suppressed for M2-F3-ASG-07
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-ASG-08
+[Watchdog] Simulation mode — comms loss suppressed for M4-F4-ASG-09
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-ASG-10
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-ASG-11
+[Watchdog] Simulation mode — comms loss suppressed for M2-F5-ASG-12
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-ASG-13
+[Watchdog] Simulation mode — comms loss suppressed for M2-F6-ASG-14
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[Socket.IO] Client connected: UpNTJur5dOcPetsiAAAN
+[Socket.IO] Client disconnected: UpNTJur5dOcPetsiAAAN
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client connected: 38Wf9RbRpXzbDMtVAAAP
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client disconnected: 38Wf9RbRpXzbDMtVAAAP
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[SimEngine] Tick — injecting simulated sensor data
+[DataHandler] Inserted 24 readings
+[AlarmService] SIMULATION — M-4: val=12.579399 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-3: val=15.147064 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-1: val=28.592388 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=18.182056 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=39.446275 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-3: val=17.487957 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-1: val=12.176788 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=12.067496 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=11.494412 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=24.035199 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=16.060464 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=14.90382 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=16.323614 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=15.371223 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=17.633901 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=19.151527 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=18.876871 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=24.262944 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.311247 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=15.445641 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.316205 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=17.061748 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=8.667977 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=18.081177 level=normal → would send GREEN to Both signal
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-AST-01
+[Watchdog] Simulation mode — comms loss suppressed for M3-F2-AST-02
+[Watchdog] Simulation mode — comms loss suppressed for M1-F2-AST-03
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-AST-04
+[Watchdog] Simulation mode — comms loss suppressed for M2-F3-AST-05
+[Watchdog] Simulation mode — comms loss suppressed for M3-F4-AST-06
+[Watchdog] Simulation mode — comms loss suppressed for M1-F4-AST-07
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-AST-08
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-AST-09
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-AST-10
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-ASG-01
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-ASG-02
+[Watchdog] Simulation mode — comms loss suppressed for M2-F1-ASG-03
+[Watchdog] Simulation mode — comms loss suppressed for M4-F2-ASG-04
+[Watchdog] Simulation mode — comms loss suppressed for M2-F2-ASG-05
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-ASG-06
+[Watchdog] Simulation mode — comms loss suppressed for M2-F3-ASG-07
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-ASG-08
+[Watchdog] Simulation mode — comms loss suppressed for M4-F4-ASG-09
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-ASG-10
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-ASG-11
+[Watchdog] Simulation mode — comms loss suppressed for M2-F5-ASG-12
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-ASG-13
+[Watchdog] Simulation mode — comms loss suppressed for M2-F6-ASG-14
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[SimEngine] Tick — injecting simulated sensor data
+[DataHandler] Inserted 24 readings
+[AlarmService] SIMULATION — M-4: val=12.62682 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-3: val=14.363392 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-1: val=31.37352 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=16.776472 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=37.581898 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-3: val=18.304112 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-1: val=12.462209 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=13.086753 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=11.531221 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=21.336831 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=15.25246 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.028298 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=16.641929 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.194872 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=15.346278 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=18.164799 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=18.944162 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=24.504758 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.229457 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=17.261919 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=16.064704 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=16.833629 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=9.307761 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=20.771043 level=normal → would send GREEN to Both signal
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-AST-01
+[Watchdog] Simulation mode — comms loss suppressed for M3-F2-AST-02
+[Watchdog] Simulation mode — comms loss suppressed for M1-F2-AST-03
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-AST-04
+[Watchdog] Simulation mode — comms loss suppressed for M2-F3-AST-05
+[Watchdog] Simulation mode — comms loss suppressed for M3-F4-AST-06
+[Watchdog] Simulation mode — comms loss suppressed for M1-F4-AST-07
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-AST-08
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-AST-09
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-AST-10
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-ASG-01
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-ASG-02
+[Watchdog] Simulation mode — comms loss suppressed for M2-F1-ASG-03
+[Watchdog] Simulation mode — comms loss suppressed for M4-F2-ASG-04
+[Watchdog] Simulation mode — comms loss suppressed for M2-F2-ASG-05
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-ASG-06
+[Watchdog] Simulation mode — comms loss suppressed for M2-F3-ASG-07
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-ASG-08
+[Watchdog] Simulation mode — comms loss suppressed for M4-F4-ASG-09
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-ASG-10
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-ASG-11
+[Watchdog] Simulation mode — comms loss suppressed for M2-F5-ASG-12
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-ASG-13
+[Watchdog] Simulation mode — comms loss suppressed for M2-F6-ASG-14
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client disconnected: LxghYIovdgm0KOq7AAAL
+[Socket.IO] Client connected: CgSkom9fUEwg-QEQAAAR
+[Socket.IO] Client disconnected: CgSkom9fUEwg-QEQAAAR
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Socket.IO] Client connected: miAglJvDjoFrwMMdAAAT
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Socket.IO] Client disconnected: _eQJgzLVURApaFY6AAAH
+[Socket.IO] Client connected: 4Q0Cj1yz-ZSAT5hrAAAV
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Socket.IO] Client connected: 3T92d3zVLp1kuWhJAAAX
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[Socket.IO] Client disconnected: 3T92d3zVLp1kuWhJAAAX
+[Socket.IO] Client connected: yCJQS3Zb0AHRCpLMAAAZ
+[Socket.IO] Client disconnected: yCJQS3Zb0AHRCpLMAAAZ
+[Socket.IO] Client connected: FUTFa1H2xWRHinz3AAAb
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[SimEngine] Tick — injecting simulated sensor data
+[DataHandler] Inserted 24 readings
+[AlarmService] SIMULATION — M-4: val=11.837766 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-3: val=14.734177 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-1: val=29.363477 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.701335 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=36.68919 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-3: val=17.871564 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-1: val=10.722128 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=12.635913 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=12.517445 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=21.624226 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.767037 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=15.623024 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=15.649379 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=15.043119 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=17.438379 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=20.514047 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=18.147932 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=23.425817 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=15.167846 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=16.245612 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=16.407061 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=16.76549 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=9.102028 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=19.404867 level=normal → would send GREEN to Both signal
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-AST-01
+[Watchdog] Simulation mode — comms loss suppressed for M3-F2-AST-02
+[Watchdog] Simulation mode — comms loss suppressed for M1-F2-AST-03
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-AST-04
+[Watchdog] Simulation mode — comms loss suppressed for M2-F3-AST-05
+[Watchdog] Simulation mode — comms loss suppressed for M3-F4-AST-06
+[Watchdog] Simulation mode — comms loss suppressed for M1-F4-AST-07
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-AST-08
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-AST-09
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-AST-10
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-ASG-01
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-ASG-02
+[Watchdog] Simulation mode — comms loss suppressed for M2-F1-ASG-03
+[Watchdog] Simulation mode — comms loss suppressed for M4-F2-ASG-04
+[Watchdog] Simulation mode — comms loss suppressed for M2-F2-ASG-05
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-ASG-06
+[Watchdog] Simulation mode — comms loss suppressed for M2-F3-ASG-07
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-ASG-08
+[Watchdog] Simulation mode — comms loss suppressed for M4-F4-ASG-09
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-ASG-10
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-ASG-11
+[Watchdog] Simulation mode — comms loss suppressed for M2-F5-ASG-12
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-ASG-13
+[Watchdog] Simulation mode — comms loss suppressed for M2-F6-ASG-14
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client connected: hvrMy4ONOIgW7KJRAAAd
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Socket.IO] Client disconnected: hvrMy4ONOIgW7KJRAAAd
+[Socket.IO] Client connected: uQRLyHx8pL0gc5vZAAAf
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Socket.IO] Client disconnected: uQRLyHx8pL0gc5vZAAAf
+[Socket.IO] Client connected: 50P_0alI7iPSygqKAAAh
+[Socket.IO] Client disconnected: 50P_0alI7iPSygqKAAAh
+[Socket.IO] Client connected: VLP6F0SrpgoSa6slAAAj
+[Socket.IO] Client disconnected: VLP6F0SrpgoSa6slAAAj
+[Socket.IO] Client connected: J8sOGmN4vKhqDUqIAAAl
+[Socket.IO] Client disconnected: J8sOGmN4vKhqDUqIAAAl
+[Socket.IO] Client connected: DNwvTj3IOj-ZyD18AAAn
+[Socket.IO] Client disconnected: DNwvTj3IOj-ZyD18AAAn
+[Socket.IO] Client connected: JXQNK5GM0wMOSHZaAAAp
+[Socket.IO] Client disconnected: JXQNK5GM0wMOSHZaAAAp
+[Socket.IO] Client connected: HP3qg2sft_x8RTeHAAAr
+[Socket.IO] Client disconnected: HP3qg2sft_x8RTeHAAAr
+[Socket.IO] Client connected: 1U6OlyHDPCXGyHIjAAAt
+[Socket.IO] Client connected: gOIw1HR-I-k6rE67AAAv
+[Socket.IO] Client disconnected: gOIw1HR-I-k6rE67AAAv
+[Socket.IO] Client connected: L-JsOsxIg_r-TZs7AAAx
+[Socket.IO] Client disconnected: L-JsOsxIg_r-TZs7AAAx
+[Socket.IO] Client connected: 1HIiJ36MmrvLrzlGAAAz
+[Socket.IO] Client disconnected: 1HIiJ36MmrvLrzlGAAAz
+[Socket.IO] Client connected: L6ji17Qg8LK1MB4GAAA1
+[Socket.IO] Client disconnected: L6ji17Qg8LK1MB4GAAA1
+[Socket.IO] Client connected: u4KVsS7Jju_w5OlcAAA3
+[Socket.IO] Client disconnected: u4KVsS7Jju_w5OlcAAA3
+[Socket.IO] Client connected: l4VE5rJPklOB-brGAAA5
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client disconnected: 1U6OlyHDPCXGyHIjAAAt
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Socket.IO] Client disconnected: l4VE5rJPklOB-brGAAA5
+[Socket.IO] Client connected: HQUxjUVfr_oYcOgzAAA7
+[Socket.IO] Client disconnected: HQUxjUVfr_oYcOgzAAA7
+[Socket.IO] Client connected: j4Ufa9KibEGpXLFiAAA9
+[Socket.IO] Client disconnected: j4Ufa9KibEGpXLFiAAA9
+[Socket.IO] Client connected: qz6NmSOTspCQDkxYAAA_
+[Socket.IO] Client disconnected: qz6NmSOTspCQDkxYAAA_
+[Socket.IO] Client connected: _RrBBtisQoTyKWaJAABB
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Socket.IO] Client disconnected: _RrBBtisQoTyKWaJAABB
+[Socket.IO] Client connected: l5hKeGuTjCkTByhtAABD
+[Socket.IO] Client disconnected: l5hKeGuTjCkTByhtAABD
+[Socket.IO] Client connected: 8jZgq-m4-7e6pfX3AABF
+[Socket.IO] Client disconnected: 8jZgq-m4-7e6pfX3AABF
+[Socket.IO] Client connected: Syzg0GMBeBgHiNgBAABH
+[Socket.IO] Client disconnected: Syzg0GMBeBgHiNgBAABH
+[Socket.IO] Client connected: m4-hZ10xhBInQAPOAABJ
+[Socket.IO] Client disconnected: m4-hZ10xhBInQAPOAABJ
+[Socket.IO] Client connected: CB-F_Ws1NiSck2o5AABL
+[Socket.IO] Client disconnected: CB-F_Ws1NiSck2o5AABL
+[Socket.IO] Client connected: YNkQBGRCn5uFa7f7AABN
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client disconnected: YNkQBGRCn5uFa7f7AABN
+[Socket.IO] Client connected: ruVp0Qc6l3u5Gb1tAABP
+[Socket.IO] Client disconnected: ruVp0Qc6l3u5Gb1tAABP
+[Socket.IO] Client connected: zMGPDCsIBw-xwFjiAABR
+[Socket.IO] Client disconnected: zMGPDCsIBw-xwFjiAABR
+[Socket.IO] Client connected: UwsT2YUcrTqgZ9xfAABT
+[Socket.IO] Client connected: 5c31IXkCw6r3r8h9AABV
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Socket.IO] Client disconnected: 5c31IXkCw6r3r8h9AABV
+[Socket.IO] Client connected: e73ntnfE_U5H3mT4AABX
+[Socket.IO] Client disconnected: e73ntnfE_U5H3mT4AABX
+[Socket.IO] Client connected: tt5wIAObek42U3BbAABZ
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[Socket.IO] Client disconnected: UwsT2YUcrTqgZ9xfAABT
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[Socket.IO] Client disconnected: tt5wIAObek42U3BbAABZ
+[Socket.IO] Client connected: ajn98CU8qIs9Zr8uAABb
+[Socket.IO] Client disconnected: ajn98CU8qIs9Zr8uAABb
+[Socket.IO] Client connected: GKJ4TYpOTh76pW1WAABd
+[Socket.IO] Client disconnected: GKJ4TYpOTh76pW1WAABd
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client connected: IP1vBRvQ27haBONPAABf
+[Socket.IO] Client disconnected: IP1vBRvQ27haBONPAABf
+[Socket.IO] Client connected: _muTY7Epj2b692TpAABh
+[Socket.IO] Client disconnected: _muTY7Epj2b692TpAABh
+[Socket.IO] Client connected: j_Iw5Umm0_c3l2PPAABj
+[Socket.IO] Client disconnected: j_Iw5Umm0_c3l2PPAABj
+[Socket.IO] Client connected: 8HTI_oL9ArEoXrz5AABl
+[Socket.IO] Client disconnected: 8HTI_oL9ArEoXrz5AABl
+[Socket.IO] Client connected: Z-dZo0XYC_9J7_HMAABn
+[Socket.IO] Client connected: sbvROMSogsc2tuwYAABp
+[Socket.IO] Client connected: LdhREPLsRDdMjRFIAABr
+[Socket.IO] Client connected: GYQ0Oda8wRx2X0KwAABt
+[Socket.IO] Client disconnected: GYQ0Oda8wRx2X0KwAABt
+[Socket.IO] Client connected: Y1bSQyHR-LiePTVVAABv
+[Socket.IO] Client disconnected: miAglJvDjoFrwMMdAAAT
+[Socket.IO] Client connected: bSiTXB5EhUEwwsHNAABx
+[Socket.IO] Client disconnected: bSiTXB5EhUEwwsHNAABx
+[Socket.IO] Client connected: JmC4hzFlB5hIiKAdAABz
+[Socket.IO] Client disconnected: JmC4hzFlB5hIiKAdAABz
+[Socket.IO] Client connected: jbPvxhT5Zh1GbRClAAB1
+[Socket.IO] Client disconnected: jbPvxhT5Zh1GbRClAAB1
+[Socket.IO] Client connected: ZcxmYHqMDot8QGp-AAB3
+[Socket.IO] Client disconnected: ZcxmYHqMDot8QGp-AAB3
+[Socket.IO] Client connected: Ip-_aihxoWK8YuZhAAB5
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Socket.IO] Client disconnected: Z-dZo0XYC_9J7_HMAABn
+[Socket.IO] Client disconnected: sbvROMSogsc2tuwYAABp
+[Socket.IO] Client disconnected: LdhREPLsRDdMjRFIAABr
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[Socket.IO] Client disconnected: Y1bSQyHR-LiePTVVAABv
+[Socket.IO] Client connected: ZO4rnNfqui4yB_k1AAB7
+[Socket.IO] Client disconnected: ZO4rnNfqui4yB_k1AAB7
+[Socket.IO] Client connected: v8UTryvz8bPeysTjAAB9
+[Socket.IO] Client disconnected: v8UTryvz8bPeysTjAAB9
+[Socket.IO] Client connected: 4o2KVVY-Zo0TGqt-AAB_
+[Socket.IO] Client disconnected: 4o2KVVY-Zo0TGqt-AAB_
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[Socket.IO] Client connected: I4mcQuPPTuFzkfI2AACB
+[Socket.IO] Client disconnected: I4mcQuPPTuFzkfI2AACB
+[Socket.IO] Client connected: Attr9e-5yDuKNMA3AACD
+[Socket.IO] Client disconnected: Attr9e-5yDuKNMA3AACD
+[Socket.IO] Client connected: qyZp06U_vOoxSExaAACF
+[Socket.IO] Client disconnected: qyZp06U_vOoxSExaAACF
+[Socket.IO] Client connected: sLFDvS4QnKPeHqqMAACH
+[Socket.IO] Client disconnected: sLFDvS4QnKPeHqqMAACH
+[Socket.IO] Client connected: mMWoFHdvBRjWOv92AACJ
+[Socket.IO] Client disconnected: mMWoFHdvBRjWOv92AACJ
+[Socket.IO] Client connected: kmyy_9iZe6-AAGwbAACL
+[Socket.IO] Client disconnected: kmyy_9iZe6-AAGwbAACL
+[Socket.IO] Client connected: DvRbKBgxsPVOEyNMAACN
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client disconnected: Ip-_aihxoWK8YuZhAAB5
+[Socket.IO] Client connected: 5YupcuRoqdMBt9VDAACP
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[SimEngine] Tick — injecting simulated sensor data
+[DataHandler] Inserted 24 readings
+[AlarmService] SIMULATION — M-4: val=12.862418 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-3: val=14.830099 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-1: val=29.658331 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.509696 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=36.899456 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-3: val=17.694206 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-1: val=11.698094 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=11.990032 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=13.020847 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=23.24662 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=16.803227 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=15.587052 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=15.730114 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=16.517386 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=15.634315 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=18.434648 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=20.146312 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=24.179966 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=16.170404 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=16.436442 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=16.303527 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=17.425832 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=8.923503 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=19.373136 level=normal → would send GREEN to Both signal
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-AST-01
+[Watchdog] Simulation mode — comms loss suppressed for M3-F2-AST-02
+[Watchdog] Simulation mode — comms loss suppressed for M1-F2-AST-03
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-AST-04
+[Watchdog] Simulation mode — comms loss suppressed for M2-F3-AST-05
+[Watchdog] Simulation mode — comms loss suppressed for M3-F4-AST-06
+[Watchdog] Simulation mode — comms loss suppressed for M1-F4-AST-07
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-AST-08
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-AST-09
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-AST-10
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-ASG-01
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-ASG-02
+[Watchdog] Simulation mode — comms loss suppressed for M2-F1-ASG-03
+[Watchdog] Simulation mode — comms loss suppressed for M4-F2-ASG-04
+[Watchdog] Simulation mode — comms loss suppressed for M2-F2-ASG-05
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-ASG-06
+[Watchdog] Simulation mode — comms loss suppressed for M2-F3-ASG-07
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-ASG-08
+[Watchdog] Simulation mode — comms loss suppressed for M4-F4-ASG-09
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-ASG-10
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-ASG-11
+[Watchdog] Simulation mode — comms loss suppressed for M2-F5-ASG-12
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-ASG-13
+[Watchdog] Simulation mode — comms loss suppressed for M2-F6-ASG-14
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client disconnected: ApZoaSfqOm2Kz7YgAAAF
+[Socket.IO] Client connected: MR8Icm943IwUOeP7AACR
+[Socket.IO] Client disconnected: MR8Icm943IwUOeP7AACR
+[Socket.IO] Client connected: Qp5IT6xAFhG3baXCAACT
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Socket.IO] Client disconnected: Qp5IT6xAFhG3baXCAACT
+[Socket.IO] Client connected: m2JzwEc9fgN9JDHZAACV
+[Socket.IO] Client disconnected: m2JzwEc9fgN9JDHZAACV
+[Socket.IO] Client connected: CPOzgdQyfnvAzfNLAACX
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client disconnected: DvRbKBgxsPVOEyNMAACN
+[Socket.IO] Client connected: Z89f-hLieJ4vN-wxAACZ
+[Socket.IO] Client disconnected: Z89f-hLieJ4vN-wxAACZ
+[Socket.IO] Client connected: ZBKEz6dlCKB_Rj9QAACb
+[Socket.IO] Client connected: q8SJ29i2tKi-hkQ-AACd
+[Socket.IO] Client disconnected: q8SJ29i2tKi-hkQ-AACd
+[Socket.IO] Client connected: Y2cXOkjRkuKENBOSAACf
+[Socket.IO] Client disconnected: Y2cXOkjRkuKENBOSAACf
+[Socket.IO] Client connected: ugy21JBtW2uo1eTTAACh
+[Socket.IO] Client disconnected: ugy21JBtW2uo1eTTAACh
+[Socket.IO] Client connected: xxFiKw7M9h_q30DCAACj
+[Socket.IO] Client disconnected: xxFiKw7M9h_q30DCAACj
+[Socket.IO] Client connected: vF_75lg1m-xgScCRAACl
+[Socket.IO] Client disconnected: vF_75lg1m-xgScCRAACl
+[Socket.IO] Client connected: b1F3RovJMLLoFPE1AACn
+[Socket.IO] Client disconnected: b1F3RovJMLLoFPE1AACn
+[Socket.IO] Client connected: iW2r6jfDGzv8EhF_AACp
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[Socket.IO] Client disconnected: ZBKEz6dlCKB_Rj9QAACb
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client disconnected: iW2r6jfDGzv8EhF_AACp
+[Socket.IO] Client connected: w6PEh6VwCa1j_q5hAACr
+[Socket.IO] Client disconnected: w6PEh6VwCa1j_q5hAACr
+[Socket.IO] Client connected: slONTY2Cg_jur1U2AACt
+[Socket.IO] Client disconnected: slONTY2Cg_jur1U2AACt
+[Socket.IO] Client connected: 6XIXzGwQFYmC9jKQAACv
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[Socket.IO] Client disconnected: 6XIXzGwQFYmC9jKQAACv
+[Socket.IO] Client connected: -N3sGdNGo5anjDtoAACx
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[Socket.IO] Client disconnected: -N3sGdNGo5anjDtoAACx
+[Socket.IO] Client connected: C-cPocpNTb1C__oVAACz
+[Socket.IO] Client disconnected: C-cPocpNTb1C__oVAACz
+[Socket.IO] Client connected: 5Ii-PcNgckF8dTfzAAC1
+[Socket.IO] Client connected: o-O7lzOgN_KKXMUNAAC3
+[Socket.IO] Client disconnected: o-O7lzOgN_KKXMUNAAC3
+[Socket.IO] Client connected: xPZN0sTS6_ZAuzyZAAC5
+[Socket.IO] Client disconnected: xPZN0sTS6_ZAuzyZAAC5
+[Socket.IO] Client connected: KTrw6cg5kW-thCdnAAC7
+[Socket.IO] Client disconnected: KTrw6cg5kW-thCdnAAC7
+[Socket.IO] Client connected: 2kfoKKCF4IGZFYstAAC9
+[Socket.IO] Client disconnected: 2kfoKKCF4IGZFYstAAC9
+[Socket.IO] Client connected: gUZFqkogZonlhO35AAC_
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client disconnected: 5Ii-PcNgckF8dTfzAAC1
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[Socket.IO] Client disconnected: 5YupcuRoqdMBt9VDAACP
+[Socket.IO] Client connected: STheCICgDwshFRqrAADB
+[Socket.IO] Client disconnected: STheCICgDwshFRqrAADB
+[Socket.IO] Client connected: yy0zsOsmLmpQtBw6AADD
+[Socket.IO] Client disconnected: yy0zsOsmLmpQtBw6AADD
+[Socket.IO] Client connected: 5T19lx1Nxoe40Gg1AADF
+[Socket.IO] Client disconnected: 5T19lx1Nxoe40Gg1AADF
+[Socket.IO] Client connected: qXNyu2xBd55sc-s_AADH
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[SimEngine] Tick — injecting simulated sensor data
+[DataHandler] Inserted 24 readings
+[AlarmService] SIMULATION — M-4: val=12.195605 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-3: val=13.146581 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-1: val=33.112107 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.531565 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=36.063635 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-3: val=16.939267 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-1: val=10.78049 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=11.263979 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=12.76097 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=23.269308 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.840509 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=16.341108 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=15.352978 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=16.510656 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=15.68796 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=18.461153 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=18.59965 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=23.55089 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=16.394556 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=15.380928 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=17.447955 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=16.424435 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-4: val=8.626045 level=normal → would send GREEN to Both signal
+[AlarmService] SIMULATION — M-2: val=18.192199 level=normal → would send GREEN to Both signal
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-AST-01
+[Watchdog] Simulation mode — comms loss suppressed for M3-F2-AST-02
+[Watchdog] Simulation mode — comms loss suppressed for M1-F2-AST-03
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-AST-04
+[Watchdog] Simulation mode — comms loss suppressed for M2-F3-AST-05
+[Watchdog] Simulation mode — comms loss suppressed for M3-F4-AST-06
+[Watchdog] Simulation mode — comms loss suppressed for M1-F4-AST-07
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-AST-08
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-AST-09
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-AST-10
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-ASG-01
+[Watchdog] Simulation mode — comms loss suppressed for M4-F1-ASG-02
+[Watchdog] Simulation mode — comms loss suppressed for M2-F1-ASG-03
+[Watchdog] Simulation mode — comms loss suppressed for M4-F2-ASG-04
+[Watchdog] Simulation mode — comms loss suppressed for M2-F2-ASG-05
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-ASG-06
+[Watchdog] Simulation mode — comms loss suppressed for M2-F3-ASG-07
+[Watchdog] Simulation mode — comms loss suppressed for M4-F3-ASG-08
+[Watchdog] Simulation mode — comms loss suppressed for M4-F4-ASG-09
+[Watchdog] Simulation mode — comms loss suppressed for M2-F4-ASG-10
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-ASG-11
+[Watchdog] Simulation mode — comms loss suppressed for M2-F5-ASG-12
+[Watchdog] Simulation mode — comms loss suppressed for M4-F5-ASG-13
+[Watchdog] Simulation mode — comms loss suppressed for M2-F6-ASG-14
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Socket.IO] Client disconnected: CPOzgdQyfnvAzfNLAACX
+[Socket.IO] Client connected: BoK5QRwueWgUyLa_AADJ
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[Socket.IO] Client disconnected: qXNyu2xBd55sc-s_AADH
+[Socket.IO] Client connected: BQdCpHUTJQQI2lU9AADL
+[Socket.IO] Client disconnected: BQdCpHUTJQQI2lU9AADL
+[Socket.IO] Client connected: 7Uq9AohKfzU6nBtAAADN
+[Socket.IO] Client disconnected: 7Uq9AohKfzU6nBtAAADN
+[Socket.IO] Client connected: EMks7hdujoo5k2MPAADP
+[Socket.IO] Client disconnected: EMks7hdujoo5k2MPAADP
+[Socket.IO] Client connected: NvOak54Vv1_9gG94AADR
+[Socket.IO] Client disconnected: NvOak54Vv1_9gG94AADR
+[Socket.IO] Client connected: fD7Di5CgQOKYx2rdAADT
+[Socket.IO] Client disconnected: fD7Di5CgQOKYx2rdAADT
+[Socket.IO] Client connected: P2yfWsxK_s8YFDvIAADV
+[Socket.IO] Client disconnected: P2yfWsxK_s8YFDvIAADV
+[Socket.IO] Client connected: GpwHtcBRMJSOa7uOAADX
+[Socket.IO] Client disconnected: GpwHtcBRMJSOa7uOAADX
+[Socket.IO] Client connected: rV0W5qCc17fUqDioAADZ
+[Socket.IO] Client disconnected: rV0W5qCc17fUqDioAADZ
+[Socket.IO] Client connected: 3a_yLgh8etLPXiGHAADb
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-4Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-3Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-1Not Connect Device
+[DataHandler] Device error from Local Server: Daum_OSV_M-2Not Connect Device
