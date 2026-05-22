@@ -1111,7 +1111,7 @@
       align-items: center;
       gap: 10px;
       font-size: 0.8rem;
-    }
+    } 
 
     /* ── Device cards ── */
     .zone-section {
@@ -1258,6 +1258,11 @@
       text-align: center;
     }
     .mgmt-sensor-input:focus { outline: none; border-color: var(--blue); }
+    .mgmt-sensor-input.dirty {
+      border-color: rgba(241,196,15,0.7);
+      background: rgba(241,196,15,0.07);
+      color: var(--yellow);
+    }
     .mgmt-sensor-save {
       font-size: 0.68rem;
       padding: 4px 10px;
@@ -1267,8 +1272,17 @@
       color: var(--blue);
       cursor: pointer;
       white-space: nowrap;
+      transition: background 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s;
     }
     .mgmt-sensor-save:hover { background: rgba(88,166,255,.22); }
+    .mgmt-sensor-save.dirty {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 0 0 3px rgba(88,166,255,0.25);
+    }
+    .mgmt-sensor-save.dirty:hover { background: #4aa0ff; }
     .mgmt-sensor-status {
       font-size: 0.68rem;
       min-width: 50px;
@@ -1400,6 +1414,133 @@
     }
 
     /* ════════════════════════════════════════════════════════════════════
+       ALARM POPUP MODAL
+    ════════════════════════════════════════════════════════════════════ */
+    .alarm-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(3px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeInOverlay 0.2s ease;
+    }
+    @keyframes fadeInOverlay { from { opacity:0; } to { opacity:1; } }
+    .alarm-modal {
+      width: 420px;
+      max-width: 92vw;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+      animation: slideUpModal 0.22s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    @keyframes slideUpModal { from { opacity:0; transform:translateY(30px) scale(0.96); } to { opacity:1; transform:translateY(0) scale(1); } }
+    .alarm-modal.level-warning {
+      border: 1.5px solid rgba(241,196,15,0.5);
+    }
+    .alarm-modal.level-danger {
+      border: 1.5px solid rgba(231,76,60,0.5);
+    }
+    .alarm-modal-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 20px 14px;
+    }
+    .alarm-modal.level-warning .alarm-modal-header { background: rgba(241,196,15,0.12); }
+    .alarm-modal.level-danger  .alarm-modal-header { background: rgba(231,76,60,0.12); }
+    .alarm-modal-icon {
+      font-size: 1.8rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .alarm-modal-title {
+      flex: 1;
+    }
+    .alarm-modal-title-main {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    .alarm-modal.level-warning .alarm-modal-title-main { color: var(--yellow); }
+    .alarm-modal.level-danger  .alarm-modal-title-main { color: var(--red); }
+    .alarm-modal-title-sub {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .alarm-modal-body {
+      background: var(--surface);
+      padding: 16px 20px;
+    }
+    .alarm-modal-zone-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .alarm-modal.level-warning .alarm-modal-zone-row { background: rgba(241,196,15,0.07); border: 1px solid rgba(241,196,15,0.2); }
+    .alarm-modal.level-danger  .alarm-modal-zone-row { background: rgba(231,76,60,0.07);  border: 1px solid rgba(231,76,60,0.2); }
+    .alarm-modal-zone-dot {
+      width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+    }
+    .alarm-modal.level-warning .alarm-modal-zone-dot { background: var(--yellow); box-shadow: 0 0 6px rgba(241,196,15,0.8); animation: blink-warn 1.8s step-end infinite; }
+    .alarm-modal.level-danger  .alarm-modal-zone-dot { background: var(--red);    box-shadow: 0 0 6px rgba(231,76,60,0.8);  animation: blink-danger 0.8s step-end infinite; }
+    .alarm-modal-zone-name {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--text);
+    }
+    .alarm-modal-msg {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .alarm-modal-time {
+      font-size: 0.68rem;
+      color: #4a5568;
+      font-family: monospace;
+      margin-bottom: 4px;
+    }
+    .alarm-modal-footer {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      padding: 12px 20px 16px;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+    .alarm-modal-btn-close {
+      padding: 8px 20px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--muted);
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .alarm-modal-btn-close:hover { background: #21293a; color: var(--text); }
+    .alarm-modal-btn-ok {
+      padding: 8px 24px;
+      border-radius: 7px;
+      border: none;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .alarm-modal.level-warning .alarm-modal-btn-ok { background: var(--yellow); color: #000; }
+    .alarm-modal.level-danger  .alarm-modal-btn-ok { background: var(--red);    color: #fff; }
+    .alarm-modal-btn-ok:hover { opacity: 0.85; }
+
+    /* ════════════════════════════════════════════════════════════════════
        CHARTS PAGE
     ════════════════════════════════════════════════════════════════════ */
     .chart-toolbar {
@@ -1429,15 +1570,39 @@
     .chart-range-btn:hover  { border-color: var(--blue); color: var(--blue); }
     .chart-range-btn.active { background: rgba(88,166,255,0.12); border-color: var(--blue); color: var(--blue); font-weight: 700; }
 
-    /* 2×2 grid matching zone-grid */
-    .chart-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      grid-template-rows: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      flex: 1;
-      min-height: 0;
+    /* Per-sensor chart layout */
+    .chart-zone-section {
+      margin-bottom: 20px;
+      max-width: 1200px;
     }
+    .chart-zone-header {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--blue);
+      padding: 6px 4px 8px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .chart-zone-header-count {
+      font-size: 0.65rem;
+      color: var(--muted);
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+    .chart-sensor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    #chart-sensor-grid::-webkit-scrollbar { width: 5px; }
+    #chart-sensor-grid::-webkit-scrollbar-track { background: transparent; }
+    #chart-sensor-grid::-webkit-scrollbar-thumb { background: #21293a; border-radius: 4px; }
+    #chart-sensor-grid::-webkit-scrollbar-thumb:hover { background: #2d3748; }
     .chart-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -1456,11 +1621,37 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 9px 14px;
+      padding: 8px 12px;
       background: var(--surface2);
       border-bottom: 1px solid var(--border);
       flex-shrink: 0;
     }
+    .chart-sensor-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      font-family: monospace;
+      color: var(--text);
+      flex: 1;
+    }
+    .chart-sensor-badge {
+      font-size: 0.6rem;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .chart-sensor-badge.ast { background: rgba(88,166,255,0.15); color: var(--blue); }
+    .chart-sensor-badge.asg { background: rgba(46,204,113,0.15); color: var(--green); }
+    .chart-sensor-status-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: #444;
+    }
+    .chart-sensor-status-dot.normal   { background: var(--green);  box-shadow: 0 0 4px rgba(46,204,113,0.6); }
+    .chart-sensor-status-dot.warning  { background: var(--yellow); box-shadow: 0 0 4px rgba(241,196,15,0.6); }
+    .chart-sensor-status-dot.danger   { background: var(--red);    box-shadow: 0 0 4px rgba(231,76,60,0.6); }
+    .chart-sensor-status-dot.inactive { background: #444; box-shadow: none; }
     .chart-zone-name {
       font-size: 0.95rem;
       font-weight: 800;
@@ -1482,7 +1673,7 @@
       font-family: monospace;
     }
     .chart-card-body {
-      flex: 1;
+      height: 160px;
       min-height: 0;
       padding: 10px 12px 8px;
       position: relative;
@@ -1804,14 +1995,11 @@
       #conn-other-wrap { margin-bottom: 8px; }
 
       /* ══ CHARTS ══ */
-      #page-charts { overflow-y: auto; }
-      .chart-grid {
+      #page-charts { overflow-y: hidden; }
+      .chart-sensor-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: none;
-        flex: none;
         gap: 10px;
       }
-      .chart-card { height: 260px; }
 
       /* ── Footer: hide on mobile (bottom nav replaces it) ── */
       .footer { display: none; }
@@ -1854,7 +2042,7 @@
   <div class="nav">
     <div class="nav-tab active" data-page="overview" data-i18n="nav_overview">개요</div>
     <div class="nav-tab" data-page="sensors" data-i18n="nav_sensor_data">센서 데이터</div>
-    <div class="nav-tab" data-page="charts" data-i18n="nav_charts" style="display:none;">추세</div>
+    <div class="nav-tab" data-page="charts" data-i18n="nav_charts">추세</div>
     <div class="nav-tab" data-page="alarms" data-i18n="nav_events">이벤트 기록</div>
     <div class="nav-tab" data-page="management" data-i18n="nav_threshold">임계값 설정</div>
     <div class="nav-tab" data-page="connections" data-i18n="nav_network">네트워크 상태</div>
@@ -1868,6 +2056,18 @@
 
     <div class="section-title" data-i18n="zone_status">구역 상태</div>
     <div class="zone-grid" id="zone-grid"></div>
+
+    <!-- Dev test buttons — remove before production -->
+    <div style="position:fixed;bottom:20px;right:20px;display:none;gap:8px;z-index:500;">
+      <button onclick="showAlarmModal('Z-2','warning','Sensor Z2-M3-AST-05 has exceeded the warning threshold. Current value: 88.42')"
+        style="padding:6px 14px;font-size:0.72rem;border-radius:6px;border:1px solid rgba(241,196,15,0.4);background:rgba(241,196,15,0.1);color:var(--yellow);cursor:pointer;">
+        ⚠ Test Warning
+      </button>
+      <button onclick="showAlarmModal('Z-4','danger','Sensor Z4-M1-AST-01 has exceeded the danger threshold. Current value: 35.91')"
+        style="padding:6px 14px;font-size:0.72rem;border-radius:6px;border:1px solid rgba(231,76,60,0.4);background:rgba(231,76,60,0.1);color:var(--red);cursor:pointer;">
+        🚨 Test Danger
+      </button>
+    </div>
   </div>
 
   <!-- ── Page: Event History ── -->
@@ -1875,10 +2075,10 @@
     <div class="tab-toolbar">
       <select id="alarm-filter-zone" onchange="alarmResetPage(); loadAlarms()">
         <option value="" data-i18n="all_zones">전체 구역</option>
-        <option value="M-1">M-1</option>
-        <option value="M-2">M-2</option>
-        <option value="M-3">M-3</option>
-        <option value="M-4">M-4</option>
+        <option value="Z-1">Z-1</option>
+        <option value="Z-2">Z-2</option>
+        <option value="Z-3">Z-3</option>
+        <option value="Z-4">Z-4</option>
       </select>
       <select id="alarm-filter-level" onchange="alarmResetPage(); loadAlarms()">
         <option value="" data-i18n="all_levels">전체 등급</option>
@@ -1948,10 +2148,10 @@
     <div class="tab-toolbar">
       <select id="sd-filter-zone" onchange="sdResetPage(); loadSensorData()">
         <option value="" data-i18n="all_zones">전체 구역</option>
-        <option value="M-1">M-1</option>
-        <option value="M-2">M-2</option>
-        <option value="M-3">M-3</option>
-        <option value="M-4">M-4</option>
+        <option value="Z-1">Z-1</option>
+        <option value="Z-2">Z-2</option>
+        <option value="Z-3">Z-3</option>
+        <option value="Z-4">Z-4</option>
       </select>
       <select id="sd-filter-device" onchange="sdResetPage(); loadSensorData()">
         <option value="" data-i18n="all_devices">전체 장치</option>
@@ -1963,9 +2163,9 @@
           <div class="dtp-panel" id="dtp-from-panel" style="display:none;">
             <div class="dtp-cal" id="dtp-from-cal"></div>
             <div class="dtp-time">
-              <input type="number" id="dtp-from-h" min="0" max="23" value="0" class="dtp-tnum"> :
-              <input type="number" id="dtp-from-m" min="0" max="59" value="0" class="dtp-tnum"> :
-              <input type="number" id="dtp-from-s" min="0" max="59" value="0" class="dtp-tnum">
+              <input type="number" id="dtp-from-h" min="0" max="23" value="0" class="dtp-tnum" oninput="dtpWriteValue('from')"> :
+              <input type="number" id="dtp-from-m" min="0" max="59" value="0" class="dtp-tnum" oninput="dtpWriteValue('from')"> :
+              <input type="number" id="dtp-from-s" min="0" max="59" value="0" class="dtp-tnum" oninput="dtpWriteValue('from')">
             </div>
             <div style="display:flex;gap:6px;margin-top:6px;">
               <button class="btn btn-muted" style="flex:1;font-size:0.72rem;padding:4px;" onmousedown="event.stopPropagation()" onclick="dtpClear('from')">Clear</button>
@@ -1981,9 +2181,9 @@
           <div class="dtp-panel" id="dtp-to-panel" style="display:none;">
             <div class="dtp-cal" id="dtp-to-cal"></div>
             <div class="dtp-time">
-              <input type="number" id="dtp-to-h" min="0" max="23" value="23" class="dtp-tnum"> :
-              <input type="number" id="dtp-to-m" min="0" max="59" value="59" class="dtp-tnum"> :
-              <input type="number" id="dtp-to-s" min="0" max="59" value="59" class="dtp-tnum">
+              <input type="number" id="dtp-to-h" min="0" max="23" value="23" class="dtp-tnum" oninput="dtpWriteValue('to')"> :
+              <input type="number" id="dtp-to-m" min="0" max="59" value="59" class="dtp-tnum" oninput="dtpWriteValue('to')"> :
+              <input type="number" id="dtp-to-s" min="0" max="59" value="59" class="dtp-tnum" oninput="dtpWriteValue('to')">
             </div>
             <div style="display:flex;gap:6px;margin-top:6px;">
               <button class="btn btn-muted" style="flex:1;font-size:0.72rem;padding:4px;" onmousedown="event.stopPropagation()" onclick="dtpClear('to')">Clear</button>
@@ -2075,55 +2275,35 @@
         <button id="ch-type-line" class="chart-range-btn"        onclick="chSetType('line')" title="Line chart">〜</button>
       </div>
     </div>
-    <div class="chart-grid" id="chart-grid">
-      <div class="chart-card" id="chart-card-M1">
-        <div class="chart-card-hd">
-          <span class="chart-zone-name">M-1</span>
-          <span class="chart-device-count" id="chart-count-M1">—</span>
-          <span class="chart-range-label" id="chart-range-M1">—</span>
-        </div>
-        <div class="chart-card-body">
-          <div class="chart-spinner" id="chart-spin-M1">Loading…</div>
-          <canvas id="chart-canvas-M1" style="display:none;"></canvas>
-        </div>
-      </div>
-      <div class="chart-card" id="chart-card-M2">
-        <div class="chart-card-hd">
-          <span class="chart-zone-name">M-2</span>
-          <span class="chart-device-count" id="chart-count-M2">—</span>
-          <span class="chart-range-label" id="chart-range-M2">—</span>
-        </div>
-        <div class="chart-card-body">
-          <div class="chart-spinner" id="chart-spin-M2">Loading…</div>
-          <canvas id="chart-canvas-M2" style="display:none;"></canvas>
-        </div>
-      </div>
-      <div class="chart-card" id="chart-card-M3">
-        <div class="chart-card-hd">
-          <span class="chart-zone-name">M-3</span>
-          <span class="chart-device-count" id="chart-count-M3">—</span>
-          <span class="chart-range-label" id="chart-range-M3">—</span>
-        </div>
-        <div class="chart-card-body">
-          <div class="chart-spinner" id="chart-spin-M3">Loading…</div>
-          <canvas id="chart-canvas-M3" style="display:none;"></canvas>
-        </div>
-      </div>
-      <div class="chart-card" id="chart-card-M4">
-        <div class="chart-card-hd">
-          <span class="chart-zone-name">M-4</span>
-          <span class="chart-device-count" id="chart-count-M4">—</span>
-          <span class="chart-range-label" id="chart-range-M4">—</span>
-        </div>
-        <div class="chart-card-body">
-          <div class="chart-spinner" id="chart-spin-M4">Loading…</div>
-          <canvas id="chart-canvas-M4" style="display:none;"></canvas>
-        </div>
-      </div>
-    </div>
+    <div id="chart-sensor-grid" style="overflow-y:auto;flex:1;min-height:0;padding-right:6px;scrollbar-width:thin;scrollbar-color:#21293a transparent;"></div>
   </div>
 
   </main><!-- /.page-wrap -->
+
+  <!-- Alarm popup modal (shown on warning/danger level changes) -->
+  <div id="alarm-modal-overlay" class="alarm-modal-overlay" style="display:none;" onclick="alarmModalDismiss(event)">
+    <div class="alarm-modal" id="alarm-modal" onclick="event.stopPropagation()">
+      <div class="alarm-modal-header">
+        <div class="alarm-modal-icon" id="alarm-modal-icon"></div>
+        <div class="alarm-modal-title">
+          <div class="alarm-modal-title-main" id="alarm-modal-title-main"></div>
+          <div class="alarm-modal-title-sub" id="alarm-modal-title-sub"></div>
+        </div>
+      </div>
+      <div class="alarm-modal-body">
+        <div class="alarm-modal-zone-row">
+          <div class="alarm-modal-zone-dot"></div>
+          <div class="alarm-modal-zone-name" id="alarm-modal-zone"></div>
+        </div>
+        <div class="alarm-modal-msg" id="alarm-modal-msg"></div>
+        <div class="alarm-modal-time" id="alarm-modal-time"></div>
+      </div>
+      <div class="alarm-modal-footer">
+        <button class="alarm-modal-btn-close" onclick="alarmModalClose()">Close</button>
+        <button class="alarm-modal-btn-ok" id="alarm-modal-btn-ok" onclick="alarmModalClose()">OK</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -2155,6 +2335,7 @@
       all_devices:     { ko: '전체 장치',      en: 'All Devices' },
       lbl_danger:      { ko: '위험',           en: 'Danger' },
       lbl_warning:     { ko: '경고',           en: 'Warning' },
+      lbl_alarm:       { ko: '알람',           en: 'Alarm' },
       lbl_normal:      { ko: '정상',           en: 'Normal' },
       lbl_comms_loss:  { ko: '통신 두절',      en: 'Comms Loss' },
       refresh:         { ko: '새로고침',       en: 'Refresh' },
@@ -2282,11 +2463,8 @@
       const activePage = document.querySelector('.page.active');
       if (activePage) {
         const pageId = activePage.id;
-        if (pageId === 'page-alarms')      loadAlarms();
-        if (pageId === 'page-connections') loadClients();
-        if (pageId === 'page-management')  loadManagement();
-        if (pageId === 'page-sensors')     loadSensorData();
-        // if (pageId === 'page-charts') { chInitDefaults(); loadCharts(); } // hidden
+        const pg = pageId.replace('page-', '');
+        showTab(pg);
       }
       buildZoneCards();
       loadZones();
@@ -2306,7 +2484,7 @@
 
   <script>
     const BASE_URL = `${window.location.protocol}//${window.location.hostname}:43000`;
-    const ZONES    = ['M-1', 'M-2', 'M-3', 'M-4'];
+    const ZONES    = ['Z-1', 'Z-2', 'Z-3', 'Z-4'];
     const CHANNEL_COLOR = { 1: 'red', 2: 'yellow', 3: 'green', 4: 'buzzer' };
     const TYPE_KEY      = { 0: 'large', 1: 'small' };
     const alarmLabel = (level) => t({ danger:'lbl_danger', warning:'lbl_warning', normal:'lbl_normal', comms_loss:'lbl_comms_loss', unknown:'lbl_unknown' }[level] || 'lbl_unknown');
@@ -2334,8 +2512,8 @@
       if (page === 'alarms')      loadAlarms();
       if (page === 'connections') loadClients();
       if (page === 'management')  loadManagement();
-      if (page === 'sensors') { initSensorDataDevices(); loadSensorData(); }
-      // if (page === 'charts') { chInitDefaults(); loadCharts(); } // hidden
+      if (page === 'sensors') { initSensorDataDevices(); sdInitDefaults(); loadSensorData(); }
+      if (page === 'charts') { chInitDefaults(); loadCharts(); }
     }
 
     // Restore last active tab — deferred so all variables are initialized first
@@ -2795,7 +2973,7 @@
         const json = await res.json();
         if (!json.success) return;
 
-        // Group by zone, sorted M-1 → M-4, unassigned last
+        // Group by zone, sorted Z-1 → Z-4, unassigned last
         const groups = {};
         json.data.forEach(d => {
           const key = d.zone_name || '__unassigned__';
@@ -2855,10 +3033,10 @@
     let mgmtZones = [];
 
     function parseSensorName(deviceName) {
-      // Expected format: M4-F1-AST-01  or  M2-F2-ASG-03
+      // Expected format: Z4-M1-AST-01  or  Z2-M6-ASG-14
       const parts = deviceName.split('-');
       if (parts.length < 4) return { floor: '—', serial: deviceName, typeLabel: '—' };
-      const floor      = parts[1];                       // F1, F2 …
+      const floor      = parts[1];                       // M1, M2 …
       const typeCode   = parts[2];                       // AST or ASG
       const typeLabel  = typeCode === 'AST' ? t('lbl_load_cell') : typeCode === 'ASG' ? t('lbl_strain') : typeCode;
       const serial     = `${parts[2]}-${parts[3]}`;     // AST-01
@@ -2885,20 +3063,23 @@
             <td class="mgmt-sensor-serial">${serial}</td>
             <td>
               <input class="mgmt-sensor-input" type="number" step="0.01"
-                     id="dev-safe-${d.id}" value="${safety}" placeholder="Safety">
+                     id="dev-safe-${d.id}" value="${safety}" data-orig="${safety}"
+                     oninput="mgmtCheckDirty(${d.id})" placeholder="Safety">
             </td>
             <td>
               <input class="mgmt-sensor-input" type="number" step="0.01"
-                     id="dev-warn-${d.id}" value="${warning}" placeholder="Warning">
+                     id="dev-warn-${d.id}" value="${warning}" data-orig="${warning}"
+                     oninput="mgmtCheckDirty(${d.id})" placeholder="Warning">
             </td>
             <td>
               <input class="mgmt-sensor-input" type="number" step="0.01"
-                     id="dev-dang-${d.id}" value="${danger}" placeholder="Danger">
+                     id="dev-dang-${d.id}" value="${danger}" data-orig="${danger}"
+                     oninput="mgmtCheckDirty(${d.id})" placeholder="Danger">
             </td>
             <td style="text-align:right;">
               <div style="display:flex;align-items:center;justify-content:flex-end;gap:8px;">
                 <span class="mgmt-sensor-status" id="dev-status-${d.id}"></span>
-                <button class="mgmt-sensor-save" onclick="saveDeviceThreshold(${d.id})">${t('lbl_save')}</button>
+                <button class="mgmt-sensor-save" data-id="${d.id}" onclick="saveDeviceThreshold(${d.id})">${t('lbl_save')}</button>
               </div>
             </td>
           </tr>`;
@@ -2971,11 +3152,26 @@
       }
     }
 
+    function mgmtCheckDirty(deviceId) {
+      const keys   = ['safe', 'warn', 'dang'];
+      const inputs = keys.map(k => document.getElementById(`dev-${k}-${deviceId}`));
+      const btn    = document.querySelector(`.mgmt-sensor-save[data-id="${deviceId}"]`);
+      let anyDirty = false;
+      inputs.forEach(inp => {
+        if (!inp) return;
+        const changed = parseFloat(inp.value) !== parseFloat(inp.dataset.orig);
+        inp.classList.toggle('dirty', changed);
+        if (changed) anyDirty = true;
+      });
+      if (btn) btn.classList.toggle('dirty', anyDirty);
+    }
+
     async function saveDeviceThreshold(deviceId) {
       const safeEl  = document.getElementById(`dev-safe-${deviceId}`);
       const warnEl  = document.getElementById(`dev-warn-${deviceId}`);
       const dangEl  = document.getElementById(`dev-dang-${deviceId}`);
       const status  = document.getElementById(`dev-status-${deviceId}`);
+      const btn     = document.querySelector(`.mgmt-sensor-save[data-id="${deviceId}"]`);
       const safety  = parseFloat(safeEl.value);
       const warning = parseFloat(warnEl.value);
       const danger  = parseFloat(dangEl.value);
@@ -2997,6 +3193,12 @@
         });
         const json = await res.json();
         if (json.success) {
+          // Update originals and clear dirty state
+          [safeEl, warnEl, dangEl].forEach(el => {
+            el.dataset.orig = el.value;
+            el.classList.remove('dirty');
+          });
+          if (btn) btn.classList.remove('dirty');
           status.style.color = 'var(--green)'; status.textContent = t('lbl_saved');
           setTimeout(() => { status.textContent = ''; }, 3000);
         } else {
@@ -3048,12 +3250,61 @@
     });
 
     socket.on('alarm:change', (d) => {
-      setZoneAlarm('M-' + d.zoneId, d.level);
+      const zoneName = ZONES[d.zoneId - 1];
+      if (!zoneName) return;
+      setZoneAlarm(zoneName, d.level);
+      if (d.level === 'warning' || d.level === 'danger') {
+        showAlarmModal(zoneName, d.level, d.message || '');
+      }
     });
 
     socket.on('comms:loss', (d) => {
       setZoneAlarm(d.zoneName, 'comms_loss');
     });
+
+    // ── Alarm Modal ───────────────────────────────────────────────────────
+    function showAlarmModal(zone, level, message) {
+      const overlay  = document.getElementById('alarm-modal-overlay');
+      const modal    = document.getElementById('alarm-modal');
+      const icon     = document.getElementById('alarm-modal-icon');
+      const titleMain= document.getElementById('alarm-modal-title-main');
+      const titleSub = document.getElementById('alarm-modal-title-sub');
+      const zoneEl   = document.getElementById('alarm-modal-zone');
+      const msgEl    = document.getElementById('alarm-modal-msg');
+      const timeEl   = document.getElementById('alarm-modal-time');
+      const btnOk    = document.getElementById('alarm-modal-btn-ok');
+
+      modal.className = `alarm-modal level-${level}`;
+
+      if (level === 'warning') {
+        icon.textContent      = '⚠';
+        titleMain.textContent = t('lbl_warning') + ' ' + t('lbl_alarm');
+        titleSub.textContent  = 'Threshold exceeded — please inspect the zone';
+        btnOk.textContent     = 'Acknowledged';
+      } else {
+        icon.textContent      = '🚨';
+        titleMain.textContent = t('lbl_danger') + ' ' + t('lbl_alarm');
+        titleSub.textContent  = 'Critical threshold exceeded — immediate action required';
+        btnOk.textContent     = 'Acknowledged';
+      }
+
+      zoneEl.textContent = zone;
+      msgEl.textContent  = message || (level === 'danger'
+        ? 'Sensor reading has exceeded the danger threshold. Check the zone immediately.'
+        : 'Sensor reading has exceeded the warning threshold. Monitor the zone closely.');
+      timeEl.textContent = new Date().toLocaleString();
+
+      overlay.style.display = 'flex';
+    }
+
+    function alarmModalClose() {
+      document.getElementById('alarm-modal-overlay').style.display = 'none';
+    }
+
+    function alarmModalDismiss(e) {
+      // Click on overlay background closes the modal
+      if (e.target === document.getElementById('alarm-modal-overlay')) alarmModalClose();
+    }
 
     socket.on('signal:echo', (d) => {
       updateSignalDot(d.zone, d.channel, d.type, d.data);
@@ -3094,7 +3345,7 @@
 
         // ── Zone cards (always render all 4, offline if missing) ──
         const ZONE_CLIENT_IDS = ['Daum_OSV_M-1', 'Daum_OSV_M-2', 'Daum_OSV_M-3', 'Daum_OSV_M-4'];
-        const ZONE_LABELS     = { 'Daum_OSV_M-1': 'M-1', 'Daum_OSV_M-2': 'M-2', 'Daum_OSV_M-3': 'M-3', 'Daum_OSV_M-4': 'M-4' };
+        const ZONE_LABELS     = { 'Daum_OSV_M-1': 'Z-1', 'Daum_OSV_M-2': 'Z-2', 'Daum_OSV_M-3': 'Z-3', 'Daum_OSV_M-4': 'Z-4' };
 
         zoneGrid.innerHTML = ZONE_CLIENT_IDS.map(cid => {
           const c     = byId[cid];
@@ -3163,11 +3414,10 @@
             </div>`;
         }).join('');
 
-        // ── Other clients (non-zone, exclude this server's own MQTT client) ──
-        const SELF_CLIENT_ID = 'osv-main-server';
+        // ── Other clients: only show mqtt_iq_* (Platform) cards ──
         const others = json.data.filter(c =>
                           !ZONE_CLIENT_IDS.includes(c.client_id) &&
-                          c.client_id !== SELF_CLIENT_ID)
+                          c.client_id.startsWith('mqtt_iq_'))
                                 .sort((a, b) => a.client_id.localeCompare(b.client_id));
 
         // ── Always show other section (summary card always present) ──
@@ -3337,6 +3587,34 @@
       to:   { year: new Date().getFullYear(), month: new Date().getMonth(), day: null },
     };
 
+    function sdInitDefaults() {
+      const p   = n => String(n).padStart(2,'0');
+      const now = new Date();
+      const from = new Date(now.getTime() - 2 * 60 * 60 * 1000); // 2 hours ago
+
+      // Sync dtpState for both fields
+      dtpState.from.year  = from.getFullYear();
+      dtpState.from.month = from.getMonth();
+      dtpState.from.day   = from.getDate();
+      dtpState.to.year    = now.getFullYear();
+      dtpState.to.month   = now.getMonth();
+      dtpState.to.day     = now.getDate();
+
+      // Sync time inputs
+      document.getElementById('dtp-from-h').value = from.getHours();
+      document.getElementById('dtp-from-m').value = from.getMinutes();
+      document.getElementById('dtp-from-s').value = from.getSeconds();
+      document.getElementById('dtp-to-h').value   = now.getHours();
+      document.getElementById('dtp-to-m').value   = now.getMinutes();
+      document.getElementById('dtp-to-s').value   = now.getSeconds();
+
+      // Write to visible input fields
+      document.getElementById('sd-from').value =
+        `${from.getFullYear()}-${p(from.getMonth()+1)}-${p(from.getDate())} ${p(from.getHours())}:${p(from.getMinutes())}:${p(from.getSeconds())}`;
+      document.getElementById('sd-to').value =
+        `${now.getFullYear()}-${p(now.getMonth()+1)}-${p(now.getDate())} ${p(now.getHours())}:${p(now.getMinutes())}:${p(now.getSeconds())}`;
+    }
+
     function dtpToggle(id) {
       const panel = document.getElementById(`dtp-${id}-panel`);
       const isOpen = panel.style.display !== 'none';
@@ -3395,17 +3673,12 @@
     function dtpPickDay(id, day) {
       dtpState[id].day = day;
       dtpRenderCal(id);
+      dtpWriteValue(id); // commit immediately so Refresh picks it up
     }
 
-    function dtpApply(id) {
-      const s   = dtpState[id];
-      if (!s.day) {
-        // Flash calendar to indicate day must be selected
-        const cal = document.getElementById(`dtp-${id}-cal`);
-        cal.style.outline = '1px solid var(--red)';
-        setTimeout(() => { cal.style.outline = ''; }, 800);
-        return;
-      }
+    function dtpWriteValue(id) {
+      const s = dtpState[id];
+      if (!s.day) return;
       const p   = n => String(n).padStart(2,'0');
       const hEl = document.getElementById(`dtp-${id}-h`);
       const mEl = document.getElementById(`dtp-${id}-m`);
@@ -3413,8 +3686,20 @@
       const h   = Math.min(23, Math.max(0, parseInt(hEl.value) || 0));
       const m   = Math.min(59, Math.max(0, parseInt(mEl.value) || 0));
       const sec = Math.min(59, Math.max(0, parseInt(sEl.value) || 0));
-      const val = `${s.year}-${p(s.month+1)}-${p(s.day)} ${p(h)}:${p(m)}:${p(sec)}`;
-      document.getElementById(`sd-${id}`).value = val;
+      document.getElementById(`sd-${id}`).value =
+        `${s.year}-${p(s.month+1)}-${p(s.day)} ${p(h)}:${p(m)}:${p(sec)}`;
+    }
+
+    function dtpApply(id) {
+      const s = dtpState[id];
+      if (!s.day) {
+        // Flash calendar to indicate day must be selected
+        const cal = document.getElementById(`dtp-${id}-cal`);
+        cal.style.outline = '1px solid var(--red)';
+        setTimeout(() => { cal.style.outline = ''; }, 800);
+        return;
+      }
+      dtpWriteValue(id);
       document.getElementById(`dtp-${id}-panel`).style.display = 'none';
       sdResetPage(); loadSensorData();
     }
@@ -3646,258 +3931,225 @@
     }
 
     async function loadCharts() {
-      // Always ensure fields have values before loading
       if (!document.getElementById('ch-from').value || !document.getElementById('ch-to').value) {
         chInitDefaults();
       }
-
       const fromVal = document.getElementById('ch-from').value;
       const toVal   = document.getElementById('ch-to').value;
-
-      const fromTs     = parseServerDate(fromVal).getTime();
-      const toTs       = parseServerDate(toVal).getTime();
+      const fromTs  = parseServerDate(fromVal).getTime();
+      const toTs    = parseServerDate(toVal).getTime();
       const rangeHours = (toTs - fromTs) / 3600000;
 
-      // Range label for card header
-      const rangeLabel = rangeHours < 24
-        ? `${Math.round(rangeHours)}H`
-        : `${Math.round(rangeHours / 24)}D`;
+      const grid = document.getElementById('chart-sensor-grid');
+      grid.innerHTML = `<div class="chart-spinner" style="display:flex;justify-content:center;padding:40px;color:var(--muted);">Loading…</div>`;
 
-      // Show spinners
-      ZONES.forEach(z => {
-        const sid = z.replace('-', '');
-        chSetSpinner(sid, true);
-        const rl = document.getElementById('chart-range-' + sid);
-        if (rl) rl.textContent = rangeLabel;
-      });
+      // Destroy all existing chart instances
+      Object.keys(chartInstances).forEach(k => { chartInstances[k].destroy(); delete chartInstances[k]; });
 
       try {
-        // Fetch device thresholds and sensor data in parallel
-        const [threshRes, dataRes] = await Promise.all([
+        const [devRes, dataRes] = await Promise.all([
           fetch(`${BASE_URL}/api/devices`),
-          fetch(`${BASE_URL}/api/sensors/history?` + new URLSearchParams({
-            from: fromVal,
-            to:   toVal,
-            limit: 2000, page: 1,
-          })),
+          fetch(`${BASE_URL}/api/sensors/history?` + new URLSearchParams({ from: fromVal, to: toVal, limit: 5000, page: 1 })),
         ]);
+        const [devJson, dataJson] = await Promise.all([devRes.json(), dataRes.json()]);
+        if (!devJson.success) throw new Error('Devices API error');
+        if (!dataJson.success) throw new Error('Data API error');
 
-        const [threshJson, dataJson] = await Promise.all([threshRes.json(), dataRes.json()]);
+        // Build device map: device_name → { warning_threshold, danger_threshold, safety_threshold, zone_name }
+        const deviceMap = {};
+        devJson.data.forEach(d => { deviceMap[d.device_name] = d; });
 
-        // Build per-zone threshold map: { 'M-1': { warning, danger }, ... }
-        const zoneThresholds = {};
-        if (threshJson.success) {
-          threshJson.data.forEach(d => {
-            const z = d.zone_name;
-            if (!z) return;
-            if (!zoneThresholds[z]) {
-              zoneThresholds[z] = { warning: d.warning_threshold, danger: d.danger_threshold };
-            } else {
-              // Use minimum threshold across devices in zone (most conservative)
-              zoneThresholds[z].warning = Math.min(zoneThresholds[z].warning, d.warning_threshold);
-              zoneThresholds[z].danger  = Math.min(zoneThresholds[z].danger,  d.danger_threshold);
-            }
-          });
-        }
+        // Group readings by device
+        const byDevice = {};
+        [...dataJson.data].reverse().forEach(r => {
+          if (!byDevice[r.device_name]) byDevice[r.device_name] = [];
+          byDevice[r.device_name].push({ x: parseServerDate(r.received_at).getTime(), y: parseFloat(r.data_value) });
+        });
 
-        if (!dataJson.success) throw new Error('API error');
-
-        // Group: zone → device → points (oldest first after reverse)
+        // Group devices by zone
         const byZone = {};
-        ZONES.forEach(z => { byZone[z] = {}; });
+        ZONES.forEach(z => { byZone[z] = []; });
+        devJson.data.forEach(d => {
+          if (d.zone_name && byZone[d.zone_name]) byZone[d.zone_name].push(d);
+        });
+        // Sort devices within each zone by device_name
+        ZONES.forEach(z => byZone[z].sort((a,b) => a.device_name.localeCompare(b.device_name)));
 
-        const rows = [...dataJson.data].reverse();
-        for (const r of rows) {
-          const zone = r.zone_name;
-          if (!zone || !byZone[zone]) continue;
-          if (!byZone[zone][r.device_name]) byZone[zone][r.device_name] = [];
-          byZone[zone][r.device_name].push({
-            x: parseServerDate(r.received_at).getTime(),
-            y: parseFloat(r.data_value),
+        // Render
+        grid.innerHTML = '';
+        ZONES.forEach(zone => {
+          const devices = byZone[zone];
+          if (!devices.length) return;
+
+          const section = document.createElement('div');
+          section.className = 'chart-zone-section';
+          section.innerHTML = `
+            <div class="chart-zone-header">
+              ${zone}
+              <span class="chart-zone-header-count">${devices.length} sensors</span>
+            </div>
+            <div class="chart-sensor-grid" id="sensor-grid-${zone.replace('-','')}"></div>`;
+          grid.appendChild(section);
+
+          const sensorGrid = section.querySelector('.chart-sensor-grid');
+          devices.forEach(device => {
+            const safeId = device.device_name.replace(/[^a-zA-Z0-9]/g, '_');
+            const typeCode = device.device_name.includes('AST') ? 'AST' : 'ASG';
+            const card = document.createElement('div');
+            card.className = 'chart-card';
+            card.innerHTML = `
+              <div class="chart-card-hd">
+                <div class="chart-sensor-status-dot" id="sdot-${safeId}"></div>
+                <span class="chart-sensor-name">${device.device_name}</span>
+                <span class="chart-sensor-badge ${typeCode.toLowerCase()}">${typeCode}</span>
+              </div>
+              <div class="chart-card-body">
+                <canvas id="chart-canvas-${safeId}"></canvas>
+              </div>`;
+            sensorGrid.appendChild(card);
+            renderSensorChart(device, byDevice[device.device_name] || [], fromTs, toTs, rangeHours, safeId);
           });
-        }
 
-        ZONES.forEach(z => renderZoneChart(z, byZone[z] || {}, zoneThresholds[z] || null, fromTs, toTs, rangeHours));
-      } catch(e) {
-        console.error('loadCharts:', e);
-        ZONES.forEach(z => {
-          const sid = z.replace('-', '');
-          chSetSpinner(sid, false);
-          const cvs = document.getElementById('chart-canvas-' + sid);
-          if (cvs) {
-            const body = cvs.parentElement;
-            let nd = body.querySelector('.chart-no-data');
-            if (!nd) { nd = document.createElement('div'); nd.className = 'chart-no-data'; body.appendChild(nd); }
-            nd.textContent = t('err_loading');
+          // Expand last card to fill remaining columns in the 3-col grid
+          const remainder = devices.length % 3;
+          if (remainder !== 0) {
+            const lastCard = sensorGrid.querySelector('.chart-card:last-child');
+            if (lastCard) lastCard.style.gridColumn = `span ${3 - remainder + 1}`;
           }
         });
+
+      } catch(e) {
+        console.error('loadCharts:', e);
+        grid.innerHTML = `<div style="color:var(--red);padding:40px;text-align:center;">${t('err_loading')}</div>`;
       }
     }
 
-    function renderZoneChart(zoneName, deviceData, thresholds, fromTs, toTs, rangeHours) {
-      const sid     = zoneName.replace('-', '');
-      const canvas  = document.getElementById('chart-canvas-' + sid);
-      const countEl = document.getElementById('chart-count-' + sid);
+    function renderSensorChart(device, points, fromTs, toTs, rangeHours, safeId) {
+      const canvas = document.getElementById('chart-canvas-' + safeId);
       if (!canvas) return;
 
-      const body    = canvas.parentElement;
-      const devices = Object.keys(deviceData);
-
-      const oldNd = body.querySelector('.chart-no-data');
-      if (oldNd) oldNd.remove();
-
-      if (countEl) {
-        countEl.textContent = devices.length ? `${devices.length} ${t('chart_devices')}` : '—';
+      // Determine current status from latest point vs thresholds
+      const latestVal = points.length ? points[points.length - 1].y : null;
+      const dot = document.getElementById('sdot-' + safeId);
+      if (dot) {
+        if (!device.active) {
+          dot.className = 'chart-sensor-status-dot inactive';
+        } else if (latestVal !== null) {
+          const status = latestVal >= parseFloat(device.danger_threshold)  ? 'danger'
+                       : latestVal >= parseFloat(device.warning_threshold) ? 'warning' : 'normal';
+          dot.className = `chart-sensor-status-dot ${status}`;
+        }
       }
 
-      if (!devices.length) {
-        chSetSpinner(sid, false);
-        canvas.style.display = 'none';
-        const nd = document.createElement('div');
-        nd.className   = 'chart-no-data';
-        nd.textContent = t('chart_no_data');
-        body.appendChild(nd);
-        if (chartInstances[zoneName]) { chartInstances[zoneName].destroy(); delete chartInstances[zoneName]; }
-        return;
-      }
+      const warn  = parseFloat(device.warning_threshold);
+      const dang  = parseFloat(device.danger_threshold);
 
-      // Device datasets — always type 'line'; fill controlled by chartViewType
-      const datasets = devices.map((device, i) => {
-        const pts   = deviceData[device];
-        const color = CHART_PALETTE[i % CHART_PALETTE.length];
-        // Convert hex palette colour to rgba for fill
-        const hex2rgba = (hex, a) => {
-          const r = parseInt(hex.slice(1,3),16);
-          const g = parseInt(hex.slice(3,5),16);
-          const b = parseInt(hex.slice(5,7),16);
-          return `rgba(${r},${g},${b},${a})`;
-        };
-        return {
-          type:             'line',
-          label:            device.replace(/^M\d+-/, ''),
-          data:             pts,
-          borderColor:      color,
-          backgroundColor:  chartViewType === 'area' ? hex2rgba(color, 0.12) : 'transparent',
-          fill:             chartViewType === 'area',
-          borderWidth:      1.5,
-          pointRadius:      0,
+      // Fit X range to actual data; fall back to selected range if no data
+      const xMin = points.length ? points[0].x               : fromTs;
+      const xMax = points.length ? points[points.length-1].x : toTs;
+
+      // Colour based on sensor type: AST=blue, ASG=green
+      const seriesColor = device.device_name.includes('AST') ? '#58a6ff' : '#2ecc71';
+      const hex2rgba = (hex, a) => {
+        const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+        return `rgba(${r},${g},${b},${a})`;
+      };
+
+      const datasets = [
+        // Series
+        {
+          type: 'line',
+          label: device.device_name,
+          data: points,
+          borderColor: seriesColor,
+          backgroundColor: chartViewType === 'area' ? hex2rgba(seriesColor, 0.12) : 'transparent',
+          fill: chartViewType === 'area',
+          borderWidth: 1.5,
+          pointRadius: 0,
           pointHoverRadius: 4,
-          tension:          0.35,
-          order:            1,
-        };
-      });
+          tension: 0.35,
+          order: 1,
+        },
+        // Warning threshold
+        {
+          type: 'line',
+          label: `⚠ Warning (${warn})`,
+          data: [{ x: xMin, y: warn }, { x: xMax, y: warn }],
+          borderColor: 'rgba(241,196,15,0.7)',
+          backgroundColor: 'transparent',
+          borderWidth: 1,
+          borderDash: [5, 4],
+          pointRadius: 0, pointHoverRadius: 0,
+          tension: 0, order: 0,
+        },
+        // Danger threshold
+        {
+          type: 'line',
+          label: `✕ Danger (${dang})`,
+          data: [{ x: xMin, y: dang }, { x: xMax, y: dang }],
+          borderColor: 'rgba(231,76,60,0.7)',
+          backgroundColor: 'transparent',
+          borderWidth: 1,
+          borderDash: [5, 4],
+          pointRadius: 0, pointHoverRadius: 0,
+          tension: 0, order: 0,
+        },
+      ];
 
-      // Threshold line datasets (drawn behind device lines)
-      if (thresholds && fromTs && toTs) {
-        if (thresholds.warning != null) {
-          datasets.push({
-            type:            'line', // always line so borderDash works even in bar mode
-            label:           `⚠ Warning (${thresholds.warning})`,
-            data:            [{ x: fromTs, y: thresholds.warning }, { x: toTs, y: thresholds.warning }],
-            borderColor:     'rgba(241,196,15,0.55)',
-            backgroundColor: 'transparent',
-            borderWidth:     1.5,
-            borderDash:      [6, 4],
-            pointRadius:     0,
-            pointHoverRadius: 0,
-            tension:         0,
-            order:           0,
-            tooltip:         { enabled: false },
-          });
-        }
-        if (thresholds.danger != null) {
-          datasets.push({
-            type:            'line', // always line so borderDash works even in bar mode
-            label:           `✕ Danger (${thresholds.danger})`,
-            data:            [{ x: fromTs, y: thresholds.danger }, { x: toTs, y: thresholds.danger }],
-            borderColor:     'rgba(231,76,60,0.55)',
-            backgroundColor: 'transparent',
-            borderWidth:     1.5,
-            borderDash:      [6, 4],
-            pointRadius:     0,
-            pointHoverRadius: 0,
-            tension:         0,
-            order:           0,
-            tooltip:         { enabled: false },
-          });
-        }
-      }
-
-      if (chartInstances[zoneName]) {
-        chartInstances[zoneName].destroy();
-        delete chartInstances[zoneName];
-      }
-
-      chSetSpinner(sid, false);
-
-      // Inline plugin: draw threshold labels at right edge of each dashed line
       const thresholdLabelPlugin = {
-        id: 'thresholdLabels',
+        id: 'thresholdLabels_' + safeId,
         afterDraw(chart) {
-          const { ctx, chartArea: { left } , scales: { y } } = chart;
+          const { ctx, chartArea: { left }, scales: { y } } = chart;
           if (!y) return;
           chart.data.datasets.forEach(ds => {
             if (ds.order !== 0 || !ds.data || !ds.data[0]) return;
-            const yVal   = ds.data[0].y;
-            const yPx    = y.getPixelForValue(yVal);
+            const yVal = ds.data[0].y;
+            const yPx  = y.getPixelForValue(yVal);
             const isWarn = ds.borderColor.includes('241,196');
-            const label  = isWarn ? `⚠ Warning ${yVal}` : `✕ Danger ${yVal}`;
             ctx.save();
-            ctx.font         = 'bold 9px "Segoe UI", sans-serif';
+            ctx.font         = 'bold 8px "Segoe UI", sans-serif';
             ctx.fillStyle    = isWarn ? 'rgba(241,196,15,0.9)' : 'rgba(231,76,60,0.9)';
             ctx.textAlign    = 'left';
             ctx.textBaseline = 'bottom';
-            ctx.fillText(label, left + 4, yPx - 3);
+            ctx.fillText(isWarn ? `⚠ ${yVal}` : `✕ ${yVal}`, left + 4, yPx - 2);
             ctx.restore();
           });
         },
       };
 
-      chartInstances[zoneName] = new Chart(canvas, {
+      if (chartInstances[safeId]) { chartInstances[safeId].destroy(); }
+
+      chartInstances[safeId] = new Chart(canvas, {
         type: 'line',
         data: { datasets },
         plugins: [thresholdLabelPlugin],
         options: {
-          responsive:          true,
+          responsive: true,
           maintainAspectRatio: false,
-          interaction:         { mode: 'index', intersect: false },
-          animation:           { duration: 250 },
+          interaction: { mode: 'index', intersect: false },
+          animation: { duration: 200 },
           plugins: {
-            legend: {
-              display:  true,
-              position: 'bottom',
-              labels: {
-                color:           '#4a5568',
-                font:            { size: 9 },
-                boxWidth:        14,
-                padding:         6,
-                usePointStyle:   true,
-                pointStyleWidth: 10,
-                filter: (item) => !item.text.startsWith('⚠') && !item.text.startsWith('✕'),
-              },
-            },
+            legend: { display: false },
             tooltip: {
               backgroundColor: 'rgba(22,27,34,0.96)',
-              borderColor:     '#21293a',
-              borderWidth:     1,
-              titleColor:      '#c9d1d9',
-              bodyColor:       '#8b949e',
-              titleFont:       { size: 10, family: 'monospace' },
-              bodyFont:        { size: 10 },
-              padding:         8,
-              filter:          (item) => item.dataset.order !== 0,
+              borderColor: '#21293a',
+              borderWidth: 1,
+              titleColor: '#c9d1d9',
+              bodyColor: '#8b949e',
+              titleFont: { size: 10, family: 'monospace' },
+              bodyFont: { size: 10 },
+              padding: 8,
+              filter: (item) => item.dataset.order !== 0,
               callbacks: {
-                title: (items) => {
-                  if (!items[0]) return '';
-                  return chFmt(new Date(items[0].parsed.x));
-                },
-                label: (item) => ` ${item.dataset.label}: ${item.parsed.y.toFixed(4)}`,
+                title: (items) => items[0] ? chFmt(new Date(items[0].parsed.x)) : '',
+                label: (item) => ` ${item.parsed.y.toFixed(4)}`,
               },
             },
           },
           scales: {
             x: {
               type: 'linear',
+              min: xMin, max: xMax,
               ticks: {
                 callback: (val) => {
                   const d = new Date(val);
@@ -3905,24 +4157,18 @@
                     ? `${chP(d.getMonth()+1)}/${chP(d.getDate())}`
                     : `${chP(d.getHours())}:${chP(d.getMinutes())}`;
                 },
-                color:         '#4a5568',
-                font:          { size: 9 },
-                maxTicksLimit: 8,
-                maxRotation:   0,
+                color: '#4a5568', font: { size: 8 }, maxTicksLimit: 6, maxRotation: 0,
               },
-              min:    fromTs,
-              max:    toTs,
-              grid:   { color: 'rgba(255,255,255,0.04)' },
+              grid: { color: 'rgba(255,255,255,0.04)' },
               border: { color: '#21293a' },
             },
             y: {
+              beginAtZero: false,
               ticks: {
-                callback:      (val) => val.toFixed(2),
-                color:         '#4a5568',
-                font:          { size: 9 },
-                maxTicksLimit: 5,
+                callback: (val) => val.toFixed(2),
+                color: '#4a5568', font: { size: 8 }, maxTicksLimit: 4,
               },
-              grid:   { color: 'rgba(255,255,255,0.04)' },
+              grid: { color: 'rgba(255,255,255,0.04)' },
               border: { color: '#21293a' },
             },
           },

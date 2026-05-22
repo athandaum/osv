@@ -8,11 +8,11 @@ function inferSensorType(deviceName) {
   return 'UNKNOWN';
 }
 
-// Parse zone name from device name prefix: M4-F1-AST-01 → "M-4"
+// Parse zone name from device name prefix: Z4-M1-AST-01 → "Z-4"
 function inferZoneName(deviceName) {
-  const match = deviceName.match(/^M(\d+)-/i);
+  const match = deviceName.match(/^Z(\d+)-/i);
   if (!match) return null;
-  return `M-${match[1]}`;
+  return `Z-${match[1]}`;
 }
 
 // Look up zone_id by zone name
